@@ -1,0 +1,126 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework File\\Zaboon\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|c:\\users\\\u0623\u062D\u0645\u062F\\source\\repos\\zaboon\\.net framework file\\zaboon\\users\\frmusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|solutionrelative:users\\frmusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|c:\\users\\\u0623\u062D\u0645\u062F\\source\\repos\\zaboon\\.net framework file\\zaboon\\users\\ucusercardinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|solutionrelative:users\\ucusercardinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|c:\\users\\\u0623\u062D\u0645\u062F\\source\\repos\\zaboon\\.net framework file\\zaboon\\frmmainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|solutionrelative:frmmainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|c:\\users\\\u0623\u062D\u0645\u062F\\source\\repos\\zaboon\\.net framework file\\zaboon\\frmmainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|solutionrelative:frmmainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|c:\\users\\\u0623\u062D\u0645\u062F\\source\\repos\\zaboon\\.net framework file\\zaboon\\ucfulluserinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|solutionrelative:ucfulluserinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmUsers.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework File\\Zaboon\\Users\\frmUsers.cs",
+              "RelativeDocumentMoniker": "Users\\frmUsers.cs",
+              "ToolTip": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework File\\Zaboon\\Users\\frmUsers.cs [Design]",
+              "RelativeToolTip": "Users\\frmUsers.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T15:55:14.079Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ucFullUserInfo.cs",
+              "DocumentMoniker": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework File\\Zaboon\\ucFullUserInfo.cs",
+              "RelativeDocumentMoniker": "ucFullUserInfo.cs",
+              "ToolTip": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework File\\Zaboon\\ucFullUserInfo.cs",
+              "RelativeToolTip": "ucFullUserInfo.cs",
+              "ViewState": "AgIAAJUAAAAAAAAAAAAswLUAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T13:22:53.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ucUserCardInfo.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework File\\Zaboon\\Users\\ucUserCardInfo.cs",
+              "RelativeDocumentMoniker": "Users\\ucUserCardInfo.cs",
+              "ToolTip": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework File\\Zaboon\\Users\\ucUserCardInfo.cs [Design]",
+              "RelativeToolTip": "Users\\ucUserCardInfo.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T13:17:22.15Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmMainMenu.cs",
+              "DocumentMoniker": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework File\\Zaboon\\frmMainMenu.cs",
+              "RelativeDocumentMoniker": "frmMainMenu.cs",
+              "ToolTip": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework File\\Zaboon\\frmMainMenu.cs",
+              "RelativeToolTip": "frmMainMenu.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T13:16:33.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmMainMenu.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework File\\Zaboon\\frmMainMenu.cs",
+              "RelativeDocumentMoniker": "frmMainMenu.cs",
+              "ToolTip": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework File\\Zaboon\\frmMainMenu.cs [Design]",
+              "RelativeToolTip": "frmMainMenu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T13:16:31.174Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

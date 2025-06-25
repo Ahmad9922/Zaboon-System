@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35431.28
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zaboon", "Zaboon.csproj", "{0FB40E3E-144A-4FF7-8052-631C285EE64A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZaboonBL", "..\ZaboonBL\ZaboonBL.csproj", "{B3C5413E-19EA-4BAB-B256-A5278BA2D6A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZaboonDAL", "..\ZaboonDAL\ZaboonDAL.csproj", "{DD4FA35C-0B33-4F45-8100-A8B89D3B494E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FB40E3E-144A-4FF7-8052-631C285EE64A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FB40E3E-144A-4FF7-8052-631C285EE64A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FB40E3E-144A-4FF7-8052-631C285EE64A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FB40E3E-144A-4FF7-8052-631C285EE64A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3C5413E-19EA-4BAB-B256-A5278BA2D6A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3C5413E-19EA-4BAB-B256-A5278BA2D6A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3C5413E-19EA-4BAB-B256-A5278BA2D6A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3C5413E-19EA-4BAB-B256-A5278BA2D6A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD4FA35C-0B33-4F45-8100-A8B89D3B494E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD4FA35C-0B33-4F45-8100-A8B89D3B494E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD4FA35C-0B33-4F45-8100-A8B89D3B494E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD4FA35C-0B33-4F45-8100-A8B89D3B494E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {75CBF9A6-CFFE-43B7-AA20-FF0CC1F30EE3}
+	EndGlobalSection
+EndGlobal

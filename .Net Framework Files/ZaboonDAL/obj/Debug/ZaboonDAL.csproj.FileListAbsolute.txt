@@ -1,0 +1,9 @@
+C:\Users\أحمد\source\repos\Zaboon\.Net Framework File\ZaboonDAL\bin\Debug\ZaboonDAL.dll
+C:\Users\أحمد\source\repos\Zaboon\.Net Framework File\ZaboonDAL\bin\Debug\ZaboonDAL.pdb
+C:\Users\أحمد\source\repos\Zaboon\.Net Framework File\ZaboonDAL\bin\Debug\Dotools.dll
+C:\Users\أحمد\source\repos\Zaboon\.Net Framework File\ZaboonDAL\bin\Debug\Dotools.pdb
+C:\Users\أحمد\source\repos\Zaboon\.Net Framework File\ZaboonDAL\obj\Debug\ZaboonDAL.csproj.AssemblyReference.cache
+C:\Users\أحمد\source\repos\Zaboon\.Net Framework File\ZaboonDAL\obj\Debug\ZaboonDAL.csproj.CoreCompileInputs.cache
+C:\Users\أحمد\source\repos\Zaboon\.Net Framework File\ZaboonDAL\obj\Debug\ZaboonDAL.csproj.Up2Date
+C:\Users\أحمد\source\repos\Zaboon\.Net Framework File\ZaboonDAL\obj\Debug\ZaboonDAL.dll
+C:\Users\أحمد\source\repos\Zaboon\.Net Framework File\ZaboonDAL\obj\Debug\ZaboonDAL.pdb
