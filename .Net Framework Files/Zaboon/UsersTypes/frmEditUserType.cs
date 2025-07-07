@@ -11,11 +11,11 @@ using ZaboonBL;
 
 namespace Zaboon
 {
-    public partial class frmAddEditUserType : Form
+    public partial class frmEditUserType : Form
     {
         public clsUserType UserType {  get; set; }
 
-        public frmAddEditUserType(clsUserType.enUserTypeID UserTypeID)
+        public frmEditUserType(clsUserType.enUserTypeID UserTypeID)
         {
             InitializeComponent();
             InitializeInfo(UserTypeID);

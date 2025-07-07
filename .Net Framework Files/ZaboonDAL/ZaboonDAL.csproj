@@ -47,7 +47,6 @@
     <Compile Include="clsFeedbackDataAccess.cs" />
     <Compile Include="clsReservationDataAccess.cs" />
     <Compile Include="clsServiceDataAccess.cs" />
-    <Compile Include="clsServiceTypeDataAccess.cs" />
     <Compile Include="clsUserDataAccess.cs" />
     <Compile Include="clsUserTypeDataAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

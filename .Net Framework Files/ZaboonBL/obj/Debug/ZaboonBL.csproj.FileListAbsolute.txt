@@ -9,3 +9,14 @@ C:\Users\أحمد\source\repos\Zaboon\.Net Framework File\ZaboonBL\bin\Debug\Dot
 C:\Users\أحمد\source\repos\Zaboon\.Net Framework File\ZaboonBL\obj\Debug\ZaboonBL.csproj.Up2Date
 C:\Users\أحمد\source\repos\Zaboon\.Net Framework File\ZaboonBL\obj\Debug\ZaboonBL.dll
 C:\Users\أحمد\source\repos\Zaboon\.Net Framework File\ZaboonBL\obj\Debug\ZaboonBL.pdb
+C:\Users\أحمد\source\repos\Zaboon\.Net Framework Files\ZaboonBL\bin\Debug\ZaboonBL.dll
+C:\Users\أحمد\source\repos\Zaboon\.Net Framework Files\ZaboonBL\bin\Debug\ZaboonBL.pdb
+C:\Users\أحمد\source\repos\Zaboon\.Net Framework Files\ZaboonBL\bin\Debug\Dotools.dll
+C:\Users\أحمد\source\repos\Zaboon\.Net Framework Files\ZaboonBL\bin\Debug\ZaboonDAL.dll
+C:\Users\أحمد\source\repos\Zaboon\.Net Framework Files\ZaboonBL\bin\Debug\ZaboonDAL.pdb
+C:\Users\أحمد\source\repos\Zaboon\.Net Framework Files\ZaboonBL\bin\Debug\Dotools.pdb
+C:\Users\أحمد\source\repos\Zaboon\.Net Framework Files\ZaboonBL\obj\Debug\ZaboonBL.csproj.AssemblyReference.cache
+C:\Users\أحمد\source\repos\Zaboon\.Net Framework Files\ZaboonBL\obj\Debug\ZaboonBL.csproj.CoreCompileInputs.cache
+C:\Users\أحمد\source\repos\Zaboon\.Net Framework Files\ZaboonBL\obj\Debug\ZaboonBL.csproj.Up2Date
+C:\Users\أحمد\source\repos\Zaboon\.Net Framework Files\ZaboonBL\obj\Debug\ZaboonBL.dll
+C:\Users\أحمد\source\repos\Zaboon\.Net Framework Files\ZaboonBL\obj\Debug\ZaboonBL.pdb

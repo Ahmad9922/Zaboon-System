@@ -15,11 +15,11 @@ namespace Zaboon
     {
         private List<clsUser> Users {  get; set; }
 
-        public clsUserType.enUserTypeID UsersType {  get; set; }
+        public clsUserType.enUserTypeID UserType {  get; set; }
 
         private void InitializeInfo()
         {
-            UsersType = clsUserType.enUserTypeID.Client;
+            UserType = clsUserType.enUserTypeID.Client;
         }
 
         public frmUsers()
@@ -49,22 +49,22 @@ namespace Zaboon
 
                 UserInfo.FillUser(User);
 
-                UserInfo.UserInfoClosed += UserInfo_UserInfoClosed;
+                UserInfo.OnUserDeleted += UserInfo_OnUserDeleted;
 
                 flpAccountsList.Controls.Add(UserInfo);
             }
         }
 
-        private void UserInfo_UserInfoClosed(object sender, EventArgs e)
+        private void UserInfo_OnUserDeleted(object sender, EventArgs e)
         {
-            LoadUsers();
+            flpAccountsList.Controls.Remove((ucUserCardInfo)sender);
         }
 
         private void LoadUsers()
         {
             flpAccountsList.Controls.Clear();
 
-            Users = clsUser.GetUsers(UsersType);
+            Users = clsUser.GetUsers(UserType);
 
             CreateAccountsControls(Users);
         }
@@ -84,7 +84,7 @@ namespace Zaboon
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-            frmAddEditUser AddEditUser = new frmAddEditUser(UsersType);
+            frmAddEditUser AddEditUser = new frmAddEditUser(UserType);
             AddEditUser.ShowDialog();
 
             LoadUsers();
@@ -92,15 +92,15 @@ namespace Zaboon
 
         private void btnSwitchType_Click(object sender, EventArgs e)
         {
-            switch (UsersType)
+            switch (UserType)
             {
                 case clsUserType.enUserTypeID.Client:
-                    UsersType = clsUserType.enUserTypeID.Employee;
+                    UserType = clsUserType.enUserTypeID.Employee;
                     txtUserType.Text = "Employee accounts";
                     break;
 
                 case clsUserType.enUserTypeID.Employee:
-                    UsersType = clsUserType.enUserTypeID.Client;
+                    UserType = clsUserType.enUserTypeID.Client;
                     txtUserType.Text = "Client accounts";
 
                     break;

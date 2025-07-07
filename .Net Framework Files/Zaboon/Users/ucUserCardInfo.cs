@@ -17,7 +17,22 @@ namespace Zaboon
     {
         public event EventHandler UserInfoClosed;
 
+        public event EventHandler OnUserDeleted;
+
         public clsUser User { get; set; }
+
+        public bool ShowDeleteButton
+        {
+            get
+            {
+                return btnDelete.Visible;
+            }
+
+            set
+            {
+                btnDelete.Visible = value;
+            }
+        }
 
         public ucUserCardInfo()
         {
@@ -51,6 +66,13 @@ namespace Zaboon
                 txtUserName.FillColor = Color.Silver;
                 txtUserName.ForeColor = Color.White;
             }
+            else
+            {
+                guna2ShadowPanel1.FillColor = Color.White;
+                guna2ShapesTool1.BorderColor = Color.White;
+                txtUserName.FillColor = Color.White;
+                txtUserName.ForeColor = Color.Silver;
+            }
         }
 
         public void FillUser(int UserID)
@@ -71,11 +93,6 @@ namespace Zaboon
             }
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show($"Are you sure you want to delete {User.UserName}",
@@ -85,6 +102,10 @@ namespace Zaboon
                 {
                     MessageBox.Show("The user has been successfully deleted.",
                         "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    this.Dispose();
+
+                    OnUserDeleted?.Invoke(this, EventArgs.Empty);
                 }
                 else
                 {
@@ -111,6 +132,8 @@ namespace Zaboon
 
             frmUserInfo UserInfo = new frmUserInfo(User);
             UserInfo.ShowDialog();
+
+            LoadInfo();
 
             UserInfoClosed?.Invoke(this, EventArgs.Empty);
         }

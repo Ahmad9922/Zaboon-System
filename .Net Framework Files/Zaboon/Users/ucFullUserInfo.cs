@@ -19,7 +19,6 @@ namespace Zaboon
         public event EventHandler EditButtonClick;
         public event EventHandler SaveButtonClick;
 
-
         public clsUser User { get; set; }
 
         public ucFullUserInfo()

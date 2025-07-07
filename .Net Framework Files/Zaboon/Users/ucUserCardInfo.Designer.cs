@@ -42,6 +42,7 @@
             // 
             this.txtUserName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtUserName.BorderColor = System.Drawing.Color.Silver;
             this.txtUserName.BorderThickness = 0;
             this.txtUserName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUserName.DefaultText = "";
@@ -101,7 +102,7 @@
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Image = global::Zaboon.Properties.Resources.Delete;
-            this.btnDelete.Location = new System.Drawing.Point(291, 15);
+            this.btnDelete.Location = new System.Drawing.Point(291, 18);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(30, 30);
             this.btnDelete.TabIndex = 3;

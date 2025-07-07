@@ -46,7 +46,7 @@ namespace Zaboon
         {
             if (UserType != null)
             {
-                frmAddEditUserType AddEditUserType = new frmAddEditUserType(UserType.UserTypeID);
+                frmEditUserType AddEditUserType = new frmEditUserType(UserType.UserTypeID);
                 AddEditUserType.ShowDialog();
 
                 EditClosed?.Invoke(this, EventArgs.Empty);

@@ -63,16 +63,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Services\frmAddEditService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\frmAddEditService.Designer.cs">
+      <DependentUpon>frmAddEditService.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUserInfo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmUserInfo.Designer.cs">
       <DependentUpon>frmUserInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucFullUserInfo.cs">
+    <Compile Include="Services\ucServiceInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucFullUserInfo.Designer.cs">
+    <Compile Include="Services\ucServiceInfo.Designer.cs">
+      <DependentUpon>ucServiceInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ucFullUserInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Users\ucFullUserInfo.Designer.cs">
       <DependentUpon>ucFullUserInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Users\frmAddEditUser.cs">
@@ -81,11 +93,11 @@
     <Compile Include="Users\frmAddEditUser.Designer.cs">
       <DependentUpon>frmAddEditUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="UsersTypes\frmAddEditUserType.cs">
+    <Compile Include="UsersTypes\frmEditUserType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UsersTypes\frmAddEditUserType.Designer.cs">
-      <DependentUpon>frmAddEditUserType.cs</DependentUpon>
+    <Compile Include="UsersTypes\frmEditUserType.Designer.cs">
+      <DependentUpon>frmEditUserType.cs</DependentUpon>
     </Compile>
     <Compile Include="UsersTypes\ucUserTypeInfo.cs">
       <SubType>UserControl</SubType>
@@ -129,10 +141,10 @@
     <Compile Include="frmReservations.Designer.cs">
       <DependentUpon>frmReservations.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmServices.cs">
+    <Compile Include="Services\frmServices.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmServices.Designer.cs">
+    <Compile Include="Services\frmServices.Designer.cs">
       <DependentUpon>frmServices.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -140,14 +152,20 @@
     <EmbeddedResource Include="frmUserInfo.resx">
       <DependentUpon>frmUserInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucFullUserInfo.resx">
+    <EmbeddedResource Include="Services\frmAddEditService.resx">
+      <DependentUpon>frmAddEditService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\ucServiceInfo.resx">
+      <DependentUpon>ucServiceInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\ucFullUserInfo.resx">
       <DependentUpon>ucFullUserInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\frmAddEditUser.resx">
       <DependentUpon>frmAddEditUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UsersTypes\frmAddEditUserType.resx">
-      <DependentUpon>frmAddEditUserType.cs</DependentUpon>
+    <EmbeddedResource Include="UsersTypes\frmEditUserType.resx">
+      <DependentUpon>frmEditUserType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsersTypes\ucUserTypeInfo.resx">
       <DependentUpon>ucUserTypeInfo.cs</DependentUpon>
@@ -170,7 +188,7 @@
     <EmbeddedResource Include="frmReservations.resx">
       <DependentUpon>frmReservations.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmServices.resx">
+    <EmbeddedResource Include="Services\frmServices.resx">
       <DependentUpon>frmServices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -253,6 +271,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cancel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_240dp_000000_FILL1_wght400_GRAD0_opsz48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

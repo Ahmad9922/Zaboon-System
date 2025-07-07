@@ -5,7 +5,7 @@
  using System.Data.SqlClient;
  using System.Linq;
  using System.Text;
- using System.Threading.Tasks;
+using System.Threading.Tasks;
 
 namespace ZaboonDAL
 {
@@ -14,13 +14,11 @@ namespace ZaboonDAL
         public class clsServiceData
         {
             public int? ServiceID { get; set; }
+            public string Name { get; set; }
             public string Description { get; set; }
-            public string Image { get; set; }
-            public DateTime CreateDate { get; set; }
-            public int ServiceTypeID { get; set; }
-
+            public bool IsActive { get; set; }
+            public decimal? Fees { get; set; }
         }
-
 
         public static bool GetByID(clsServiceData ServiceData)
         {
@@ -36,8 +34,8 @@ namespace ZaboonDAL
         public static int Add(clsServiceData ServiceData)
         {
             string Query = @"INSERT INTO [dbo].[Services] ( 
-[Description], [Image], [CreateDate], [ServiceTypeID])
- VALUES ( @Description, @Image, @CreateDate, @ServiceTypeID)
+[Name], [Description], [IsActive], [Fees])
+ VALUES ( @Name, @Description, @IsActive, @Fees)
  SELECT SCOPE_IDENTITY();";
 
             return clsAdoQueryExecutor.ExecuteQuery(Command =>
@@ -50,10 +48,10 @@ namespace ZaboonDAL
         public static bool Update(clsServiceData ServiceData)
         {
             string Query = @"UPDATE [dbo].[Services] SET 
+[Name] = @Name,
 [Description] = @Description,
-[Image] = @Image,
-[CreateDate] = @CreateDate,
-[ServiceTypeID] = @ServiceTypeID WHERE ServiceID = @ServiceID";
+[IsActive] = @IsActive,
+[Fees] = @Fees WHERE ServiceID = @ServiceID";
 
             return clsAdoQueryExecutor.ExecuteQuery(Command =>
             {
@@ -93,6 +91,28 @@ namespace ZaboonDAL
                 return clsAdoQueryExecutor.ExecuteReader(Command, FilterData);
 
             }, Query);
+        }
+
+        public static List<clsServiceData> GetServices()
+        {
+            string Query = @"SELECT * FROM Services";
+
+            return clsAdoQueryExecutor.ExecuteQuery(Command =>
+            {
+                return clsAdoQueryExecutor.ExecuteReader<clsServiceData>(Command);
+
+            }, Query);
+        }
+
+        public static List<clsServiceData> GetServices(string Name)
+        {
+            string Query = @"SELECT * FROM Services WHERE Name = @Name";
+
+            return clsAdoQueryExecutor.ExecuteQuery(Command =>
+            {
+                return clsAdoQueryExecutor.ExecuteReader<clsServiceData>(Command);
+
+            }, Query, new SqlParameter("@Name", Name));
         }
 
         public static bool IsExist(int ServiceID)

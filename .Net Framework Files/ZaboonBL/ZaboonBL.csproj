@@ -47,7 +47,6 @@
     <Compile Include="clsFeedback.cs" />
     <Compile Include="clsReservation.cs" />
     <Compile Include="clsService.cs" />
-    <Compile Include="clsServiceType.cs" />
     <Compile Include="clsUser.cs" />
     <Compile Include="clsUserType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

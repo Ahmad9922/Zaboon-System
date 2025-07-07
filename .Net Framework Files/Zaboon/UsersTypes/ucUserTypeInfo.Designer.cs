@@ -47,7 +47,7 @@
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.Radius = 12;
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Silver;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(221, 142);
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(385, 142);
             this.guna2ShadowPanel1.TabIndex = 6;
             // 
             // txtDescription
@@ -57,6 +57,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDescription.BorderRadius = 18;
             this.txtDescription.BorderThickness = 0;
+            this.txtDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDescription.DefaultText = "";
             this.txtDescription.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtDescription.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -73,7 +74,7 @@
             this.txtDescription.PlaceholderText = "";
             this.txtDescription.ReadOnly = true;
             this.txtDescription.SelectedText = "";
-            this.txtDescription.Size = new System.Drawing.Size(195, 72);
+            this.txtDescription.Size = new System.Drawing.Size(359, 72);
             this.txtDescription.TabIndex = 5;
             // 
             // btnUpdate
@@ -90,7 +91,7 @@
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.Image = global::Zaboon.Properties.Resources.Edit1;
             this.btnUpdate.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnUpdate.Location = new System.Drawing.Point(178, 17);
+            this.btnUpdate.Location = new System.Drawing.Point(342, 17);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(30, 30);
             this.btnUpdate.TabIndex = 4;
@@ -102,6 +103,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtName.BorderRadius = 18;
             this.txtName.BorderThickness = 0;
+            this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtName.CustomizableEdges.BottomLeft = false;
             this.txtName.CustomizableEdges.BottomRight = false;
             this.txtName.CustomizableEdges.TopRight = false;
@@ -120,7 +122,7 @@
             this.txtName.PlaceholderText = "";
             this.txtName.ReadOnly = true;
             this.txtName.SelectedText = "";
-            this.txtName.Size = new System.Drawing.Size(159, 36);
+            this.txtName.Size = new System.Drawing.Size(323, 36);
             this.txtName.TabIndex = 1;
             this.txtName.WordWrap = false;
             // 
@@ -130,7 +132,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2ShadowPanel1);
             this.Name = "ucUserTypeInfo";
-            this.Size = new System.Drawing.Size(221, 142);
+            this.Size = new System.Drawing.Size(385, 142);
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

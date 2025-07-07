@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.flpAccountsList = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnSwitchType = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUserType = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnAddUser = new Guna.UI2.WinForms.Guna2Button();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnSwitchType = new Guna.UI2.WinForms.Guna2CircleButton();
             this.ucEmployeeType = new Zaboon.ucUserTypeInfo();
             this.ucClientUserType = new Zaboon.ucUserTypeInfo();
             this.SuspendLayout();
@@ -42,53 +42,12 @@
             this.flpAccountsList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.flpAccountsList.AutoScroll = true;
             this.flpAccountsList.BackColor = System.Drawing.Color.White;
             this.flpAccountsList.Location = new System.Drawing.Point(13, 60);
             this.flpAccountsList.Name = "flpAccountsList";
             this.flpAccountsList.Size = new System.Drawing.Size(908, 443);
             this.flpAccountsList.TabIndex = 1;
-            // 
-            // btnSwitchType
-            // 
-            this.btnSwitchType.BackColor = System.Drawing.Color.Transparent;
-            this.btnSwitchType.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSwitchType.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSwitchType.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSwitchType.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSwitchType.FillColor = System.Drawing.Color.SeaGreen;
-            this.btnSwitchType.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSwitchType.ForeColor = System.Drawing.Color.White;
-            this.btnSwitchType.Image = global::Zaboon.Properties.Resources.Sync;
-            this.btnSwitchType.Location = new System.Drawing.Point(562, 13);
-            this.btnSwitchType.Name = "btnSwitchType";
-            this.btnSwitchType.ShadowDecoration.Color = System.Drawing.Color.Silver;
-            this.btnSwitchType.ShadowDecoration.Enabled = true;
-            this.btnSwitchType.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnSwitchType.Size = new System.Drawing.Size(36, 36);
-            this.btnSwitchType.TabIndex = 5;
-            this.btnSwitchType.Click += new System.EventHandler(this.btnSwitchType_Click);
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.BorderColor = System.Drawing.Color.SeaGreen;
-            this.txtSearch.BorderRadius = 12;
-            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearch.DefaultText = "";
-            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.IconRight = global::Zaboon.Properties.Resources.Search;
-            this.txtSearch.Location = new System.Drawing.Point(186, 13);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PlaceholderText = "User Name";
-            this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(370, 36);
-            this.txtSearch.TabIndex = 7;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // txtUserType
             // 
@@ -134,6 +93,48 @@
             this.btnAddUser.Text = "Add";
             this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
+            // txtSearch
+            // 
+            this.txtSearch.BorderColor = System.Drawing.Color.SeaGreen;
+            this.txtSearch.BorderRadius = 12;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.DefaultText = "";
+            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.IconRight = global::Zaboon.Properties.Resources.Search;
+            this.txtSearch.Location = new System.Drawing.Point(186, 13);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PlaceholderText = "User Name";
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.Size = new System.Drawing.Size(370, 36);
+            this.txtSearch.TabIndex = 7;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
+            // btnSwitchType
+            // 
+            this.btnSwitchType.BackColor = System.Drawing.Color.Transparent;
+            this.btnSwitchType.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSwitchType.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSwitchType.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSwitchType.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSwitchType.FillColor = System.Drawing.Color.SeaGreen;
+            this.btnSwitchType.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSwitchType.ForeColor = System.Drawing.Color.White;
+            this.btnSwitchType.Image = global::Zaboon.Properties.Resources.Sync;
+            this.btnSwitchType.Location = new System.Drawing.Point(562, 13);
+            this.btnSwitchType.Name = "btnSwitchType";
+            this.btnSwitchType.ShadowDecoration.Color = System.Drawing.Color.Silver;
+            this.btnSwitchType.ShadowDecoration.Enabled = true;
+            this.btnSwitchType.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnSwitchType.Size = new System.Drawing.Size(36, 36);
+            this.btnSwitchType.TabIndex = 5;
+            this.btnSwitchType.Click += new System.EventHandler(this.btnSwitchType_Click);
+            // 
             // ucEmployeeType
             // 
             this.ucEmployeeType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -142,6 +143,7 @@
             this.ucEmployeeType.Size = new System.Drawing.Size(336, 111);
             this.ucEmployeeType.TabIndex = 15;
             this.ucEmployeeType.UserType = null;
+            this.ucEmployeeType.EditClosed += new System.EventHandler(this.UserTypeInfo_EditClosed);
             // 
             // ucClientUserType
             // 
@@ -151,6 +153,7 @@
             this.ucClientUserType.Size = new System.Drawing.Size(336, 111);
             this.ucClientUserType.TabIndex = 14;
             this.ucClientUserType.UserType = null;
+            this.ucClientUserType.EditClosed += new System.EventHandler(this.UserTypeInfo_EditClosed);
             // 
             // frmUsers
             // 

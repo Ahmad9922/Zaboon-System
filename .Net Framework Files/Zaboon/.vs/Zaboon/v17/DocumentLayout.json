@@ -1,26 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework File\\Zaboon\\",
+  "WorkspaceRootPath": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\Zaboon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|c:\\users\\\u0623\u062D\u0645\u062F\\source\\repos\\zaboon\\.net framework file\\zaboon\\users\\frmusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|solutionrelative:users\\frmusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|c:\\users\\\u0623\u062D\u0645\u062F\\source\\repos\\zaboon\\.net framework files\\zaboon\\services\\ucserviceinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|solutionrelative:services\\ucserviceinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|c:\\users\\\u0623\u062D\u0645\u062F\\source\\repos\\zaboon\\.net framework file\\zaboon\\users\\ucusercardinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|solutionrelative:users\\ucusercardinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|c:\\users\\\u0623\u062D\u0645\u062F\\source\\repos\\zaboon\\.net framework files\\zaboon\\services\\ucserviceinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|solutionrelative:services\\ucserviceinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|c:\\users\\\u0623\u062D\u0645\u062F\\source\\repos\\zaboon\\.net framework file\\zaboon\\frmmainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|solutionrelative:frmmainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|c:\\users\\\u0623\u062D\u0645\u062F\\source\\repos\\zaboon\\.net framework files\\zaboon\\services\\frmaddeditservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|solutionrelative:services\\frmaddeditservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|c:\\users\\\u0623\u062D\u0645\u062F\\source\\repos\\zaboon\\.net framework file\\zaboon\\frmmainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|solutionrelative:frmmainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|c:\\users\\\u0623\u062D\u0645\u062F\\source\\repos\\zaboon\\.net framework files\\zaboon\\services\\frmaddeditservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|solutionrelative:services\\frmaddeditservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|c:\\users\\\u0623\u062D\u0645\u062F\\source\\repos\\zaboon\\.net framework file\\zaboon\\ucfulluserinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|solutionrelative:ucfulluserinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|c:\\users\\\u0623\u062D\u0645\u062F\\source\\repos\\zaboon\\.net framework files\\zaboon\\services\\frmservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|solutionrelative:services\\frmservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -59,64 +59,65 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmUsers.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework File\\Zaboon\\Users\\frmUsers.cs",
-              "RelativeDocumentMoniker": "Users\\frmUsers.cs",
-              "ToolTip": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework File\\Zaboon\\Users\\frmUsers.cs [Design]",
-              "RelativeToolTip": "Users\\frmUsers.cs [Design]",
+              "Title": "ucServiceInfo.cs",
+              "DocumentMoniker": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\Zaboon\\Services\\ucServiceInfo.cs",
+              "RelativeDocumentMoniker": "Services\\ucServiceInfo.cs",
+              "ToolTip": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\Zaboon\\Services\\ucServiceInfo.cs",
+              "RelativeToolTip": "Services\\ucServiceInfo.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAowBIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T15:55:14.079Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ucFullUserInfo.cs",
-              "DocumentMoniker": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework File\\Zaboon\\ucFullUserInfo.cs",
-              "RelativeDocumentMoniker": "ucFullUserInfo.cs",
-              "ToolTip": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework File\\Zaboon\\ucFullUserInfo.cs",
-              "RelativeToolTip": "ucFullUserInfo.cs",
-              "ViewState": "AgIAAJUAAAAAAAAAAAAswLUAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T13:22:53.455Z",
+              "WhenOpened": "2025-07-07T12:33:33.503Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ucUserCardInfo.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework File\\Zaboon\\Users\\ucUserCardInfo.cs",
-              "RelativeDocumentMoniker": "Users\\ucUserCardInfo.cs",
-              "ToolTip": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework File\\Zaboon\\Users\\ucUserCardInfo.cs [Design]",
-              "RelativeToolTip": "Users\\ucUserCardInfo.cs [Design]",
+              "Title": "ucServiceInfo.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\Zaboon\\Services\\ucServiceInfo.cs",
+              "RelativeDocumentMoniker": "Services\\ucServiceInfo.cs",
+              "ToolTip": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\Zaboon\\Services\\ucServiceInfo.cs [Design]",
+              "RelativeToolTip": "Services\\ucServiceInfo.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T13:17:22.15Z",
+              "WhenOpened": "2025-07-07T12:33:31.513Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmMainMenu.cs",
-              "DocumentMoniker": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework File\\Zaboon\\frmMainMenu.cs",
-              "RelativeDocumentMoniker": "frmMainMenu.cs",
-              "ToolTip": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework File\\Zaboon\\frmMainMenu.cs",
-              "RelativeToolTip": "frmMainMenu.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T13:16:33.997Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "frmMainMenu.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework File\\Zaboon\\frmMainMenu.cs",
-              "RelativeDocumentMoniker": "frmMainMenu.cs",
-              "ToolTip": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework File\\Zaboon\\frmMainMenu.cs [Design]",
-              "RelativeToolTip": "frmMainMenu.cs [Design]",
+              "Title": "frmAddEditService.cs",
+              "DocumentMoniker": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\Zaboon\\Services\\frmAddEditService.cs",
+              "RelativeDocumentMoniker": "Services\\frmAddEditService.cs",
+              "ToolTip": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\Zaboon\\Services\\frmAddEditService.cs",
+              "RelativeToolTip": "Services\\frmAddEditService.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAQwHUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T13:16:31.174Z",
+              "WhenOpened": "2025-07-07T12:19:04.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmAddEditService.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\Zaboon\\Services\\frmAddEditService.cs",
+              "RelativeDocumentMoniker": "Services\\frmAddEditService.cs",
+              "ToolTip": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\Zaboon\\Services\\frmAddEditService.cs [Design]",
+              "RelativeToolTip": "Services\\frmAddEditService.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T12:20:19.868Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmServices.cs",
+              "DocumentMoniker": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\Zaboon\\Services\\frmServices.cs",
+              "RelativeDocumentMoniker": "Services\\frmServices.cs",
+              "ToolTip": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\Zaboon\\Services\\frmServices.cs",
+              "RelativeToolTip": "Services\\frmServices.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAwwDkAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T12:18:12.816Z",
+              "EditorCaption": ""
             }
           ]
         }
