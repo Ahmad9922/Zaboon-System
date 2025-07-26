@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CustomControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +14,7 @@ namespace Zaboon
 {
     public partial class frmAddEditService : Form
     {
-        public clsService ServiceType {  get; set; }
+        public clsService Service {  get; set; }
 
         public event EventHandler<clsService> OnSaveSuccessfully;
 
@@ -37,21 +38,38 @@ namespace Zaboon
             }
         }
 
+        private void LoadServiceHours()
+        {
+            List<UCTimeRangePicker.TimeRange> hours = new List<UCTimeRangePicker.TimeRange>();
+
+            foreach (clsServiceHour ServiceHour in Service.ServiceHours)
+            {
+                UCTimeRangePicker.TimeRange timeRange = new UCTimeRangePicker.TimeRange();
+                timeRange.StartTime = ServiceHour.WorkStartTime;
+                timeRange.EndTime = ServiceHour.WorkEndTime;
+
+                hours.Add(timeRange);
+            }
+
+        }
+
         private void LoadInfo()
         {
-            txtName.Text = ServiceType.Name;
-            txtDescription.Text = ServiceType.Description;
+            txtName.Text = Service.Name;
+            txtDescription.Text = Service.Description;
             
-            if (ServiceType.Fees != null)
+            if (Service.Fees != null)
             {
-                nudFees.Value = ServiceType.Fees.Value;
+                nudFees.Value = Service.Fees.Value;
             }
             else
             {
                 nudFees.Value = 0;
             }
 
-            cbIsActive.Checked = ServiceType.IsActive;
+            cbIsActive.Checked = Service.IsActive;
+
+            LoadServiceHours();
         }
 
         public frmAddEditService()
@@ -67,7 +85,7 @@ namespace Zaboon
         {
             InitializeComponent();
 
-            this.ServiceType = ServiceType;
+            this.Service = ServiceType;
             Mode = enMode.Edit;
 
             InitializeInfo();
@@ -77,9 +95,9 @@ namespace Zaboon
         {
             if (Mode == enMode.Add)
             {
-                ServiceType = clsService.Add(txtName.Text);
+                Service = clsService.Add(txtName.Text);
 
-                if (ServiceType != null)
+                if (Service != null)
                 {
                     return true;
                 }
@@ -97,34 +115,34 @@ namespace Zaboon
             return false;
         }
 
-        private void SetServiceInfo()
+        private void PrepareServiceInfo()
         {
             if (nudFees.Value != 0)
             {
-                ServiceType.Fees = nudFees.Value;
+                Service.Fees = nudFees.Value;
             }
             else
             {
-                ServiceType.Fees = null;
+                Service.Fees = null;
             }
 
-            ServiceType.Name = txtName.Text;
-            ServiceType.Description = txtDescription.Text;
-            ServiceType.IsActive = cbIsActive.Checked;
+            Service.Name = txtName.Text;
+            Service.Description = txtDescription.Text;
+            Service.IsActive = cbIsActive.Checked;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (ValidatingName())
             {
-                SetServiceInfo();
+                PrepareServiceInfo();
 
-                if (ServiceType.Save())
+                if (Service.Save())
                 {
                     MessageBox.Show("The service has been saved successfully .",
                         "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    OnSaveSuccessfully?.Invoke(this, ServiceType);
+                    OnSaveSuccessfully?.Invoke(this, Service);
 
                     this.Close();
                 }

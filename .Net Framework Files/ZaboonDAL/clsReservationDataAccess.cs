@@ -5,7 +5,7 @@
  using System.Data.SqlClient;
  using System.Linq;
  using System.Text;
- using System.Threading.Tasks;
+using System.Threading.Tasks;
 
 namespace ZaboonDAL
 {
@@ -19,9 +19,9 @@ namespace ZaboonDAL
             public byte ReservationStatus { get; set; }
             public decimal? PaidFees { get; set; }
             public int ServiceID { get; set; }
+            public int ServiceHourID { get; set; }
 
         }
-
 
         public static bool GetByID(clsReservationData ReservationData)
         {
@@ -37,8 +37,8 @@ namespace ZaboonDAL
         public static int Add(clsReservationData ReservationData)
         {
             string Query = @"INSERT INTO [dbo].[Reservations] ( 
-[UserID], [ReservationDate], [ReservationStatus], [PaidFees], [ServiceID])
- VALUES ( @UserID, @ReservationDate, @ReservationStatus, @PaidFees, @ServiceID)
+[UserID], [ReservationDate], [ReservationStatus], [PaidFees], [ServiceID], [ServiceHourID])
+ VALUES ( @UserID, @ReservationDate, @ReservationStatus, @PaidFees, @ServiceID, @ServiceHourID)
  SELECT SCOPE_IDENTITY();";
 
             return clsAdoQueryExecutor.ExecuteQuery(Command =>
@@ -55,7 +55,8 @@ namespace ZaboonDAL
 [ReservationDate] = @ReservationDate,
 [ReservationStatus] = @ReservationStatus,
 [PaidFees] = @PaidFees,
-[ServiceID] = @ServiceID WHERE ReservationID = @ReservationID";
+[ServiceID] = @ServiceID,
+[ServiceHourID] = @ServiceHourID WHERE ReservationID = @ReservationID";
 
             return clsAdoQueryExecutor.ExecuteQuery(Command =>
             {
@@ -77,7 +78,7 @@ namespace ZaboonDAL
 
         public static DataTable GetList()
         {
-            string Query = @"SELECT * FROM Reservations";
+            string Query = @"SELECT * FROM ReservationsDetails";
 
             return clsAdoQueryExecutor.ExecuteQuery(Command =>
             {
@@ -88,13 +89,66 @@ namespace ZaboonDAL
 
         public static DataTable GetList(clsDataTypes.clsFilterData FilterData)
         {
-            string Query = @"SELECT * FROM Reservations";
+            string Query = @"SELECT * FROM ReservationsDetails";
 
             return clsAdoQueryExecutor.ExecuteQuery(Command =>
             {
                 return clsAdoQueryExecutor.ExecuteReader(Command, FilterData);
 
             }, Query);
+        }
+
+        public static List<clsReservationData> GetReservations()
+        {
+            string Query = @"SELECT * FROM Reservations";
+
+            return clsAdoQueryExecutor.ExecuteQuery(Command =>
+            {
+                return clsAdoQueryExecutor.ExecuteReader<clsReservationData>(Command);
+
+            }, Query);
+        }
+
+        public static List<clsReservationData> GetReservations(int UserID)
+        {
+            string Query = @"SELECT * FROM Reservations WHERE UserID = @UserID";
+
+            return clsAdoQueryExecutor.ExecuteQuery(Command =>
+            {
+                return clsAdoQueryExecutor.ExecuteReader<clsReservationData>(Command);
+
+            }, Query, new SqlParameter("@UserID", UserID));
+        }
+
+        public static List<clsReservationData> GetReservations(int UserID, int ServiceID)
+        {
+            string Query = @"SELECT * FROM Reservations WHERE UserID = @UserID AND ServiceID = @ServiceID";
+
+            return clsAdoQueryExecutor.ExecuteQuery(Command =>
+            {
+                return clsAdoQueryExecutor.ExecuteReader<clsReservationData>(Command);
+
+            }, Query, new SqlParameter[] { 
+                
+                new SqlParameter("@UserID", UserID),
+                new SqlParameter("@ServiceID", ServiceID)
+            
+            });
+        }
+
+        public static List<clsReservationData> GetCurrentShiftReservations(int ServiceID)
+        {
+            string Query = @"SELECT * FROM Reservations
+                             WHERE ServiceHourID = (SELECT ServiceHourID FROm ServiceHours
+                             WHERE CAST(GETDATE() AS TIME) Between WorkStartTime AND WorkEndTime
+                             AND DayOfWeek = DATEPART(WEEKDAY, GETDATE()) - 1 AND ServiceID = @ServiceID)
+                             AND ReservationDate = CAST(GETDATE() AS DATE)";
+
+            return clsAdoQueryExecutor.ExecuteQuery(Command =>
+            {
+                return clsAdoQueryExecutor.ExecuteReader<clsReservationData>(Command);
+
+            }, Query, new SqlParameter("@ServiceID", ServiceID));
         }
 
         public static bool IsExist(int ReservationID)

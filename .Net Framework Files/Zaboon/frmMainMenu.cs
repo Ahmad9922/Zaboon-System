@@ -26,7 +26,7 @@ namespace Zaboon
 
             ucTabControl.SetForm(Home);
             ucTabControl.SetForm(Users, Users.frmUsers_Load);
-            ucTabControl.SetForm(Reservations);
+            ucTabControl.SetForm(Reservations, Reservations.frmReservations_Load);
             ucTabControl.SetForm(services, services.frmServices_Load);
         }
     }

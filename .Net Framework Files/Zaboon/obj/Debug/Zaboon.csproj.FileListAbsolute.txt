@@ -64,3 +64,11 @@ C:\Users\أحمد\source\repos\Zaboon\.Net Framework Files\Zaboon\obj\Debug\Zabo
 C:\Users\أحمد\source\repos\Zaboon\.Net Framework Files\Zaboon\obj\Debug\Zaboon.frmEditUserType.resources
 C:\Users\أحمد\source\repos\Zaboon\.Net Framework Files\Zaboon\obj\Debug\Zaboon.frmAddEditService.resources
 C:\Users\أحمد\source\repos\Zaboon\.Net Framework Files\Zaboon\obj\Debug\Zaboon.ucServiceInfo.resources
+C:\Users\أحمد\source\repos\Zaboon\.Net Framework Files\Zaboon\obj\Debug\Zaboon.frmAddEditReservation.resources
+C:\Users\أحمد\source\repos\Zaboon\.Net Framework Files\Zaboon\obj\Debug\Zaboon.ucFindUser.resources
+C:\Users\أحمد\source\repos\Zaboon\.Net Framework Files\Zaboon\obj\Debug\Zaboon.frmFindUser.resources
+C:\Users\أحمد\source\repos\Zaboon\.Net Framework Files\Zaboon\obj\Debug\Zaboon.frmQueueManagement.resources
+C:\Users\أحمد\source\repos\Zaboon\.Net Framework Files\Zaboon\obj\Debug\Zaboon.frmServiceHours.resources
+C:\Users\أحمد\source\repos\Zaboon\.Net Framework Files\Zaboon\obj\Debug\Zaboon.frmServiceHourSetup.resources
+C:\Users\أحمد\source\repos\Zaboon\.Net Framework Files\Zaboon\obj\Debug\Zaboon.ucReservationInfo.resources
+C:\Users\أحمد\source\repos\Zaboon\.Net Framework Files\Zaboon\obj\Debug\Zaboon.ucServiceHourCardInfo.resources

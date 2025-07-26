@@ -48,7 +48,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -63,16 +65,57 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmFindUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFindUser.Designer.cs">
+      <DependentUpon>frmFindUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQueueManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQueueManagement.Designer.cs">
+      <DependentUpon>frmQueueManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service Hours\frmServiceHours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service Hours\frmServiceHours.Designer.cs">
+      <DependentUpon>frmServiceHours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service Hours\frmServiceHourSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service Hours\frmServiceHourSetup.Designer.cs">
+      <DependentUpon>frmServiceHourSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reservations\frmAddEditReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservations\frmAddEditReservation.Designer.cs">
+      <DependentUpon>frmAddEditReservation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Services\frmAddEditService.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Services\frmAddEditService.Designer.cs">
       <DependentUpon>frmAddEditService.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUserInfo.cs">
+    <Compile Include="ucReservationInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucReservationInfo.Designer.cs">
+      <DependentUpon>ucReservationInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmUserInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmUserInfo.Designer.cs">
+    <Compile Include="Users\frmUserInfo.Designer.cs">
       <DependentUpon>frmUserInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Services\ucServiceInfo.cs">
@@ -80,6 +123,18 @@
     </Compile>
     <Compile Include="Services\ucServiceInfo.Designer.cs">
       <DependentUpon>ucServiceInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ucFindUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Users\ucFindUser.Designer.cs">
+      <DependentUpon>ucFindUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service Hours\ucServiceHourCardInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Service Hours\ucServiceHourCardInfo.Designer.cs">
+      <DependentUpon>ucServiceHourCardInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Users\ucFullUserInfo.cs">
       <SubType>UserControl</SubType>
@@ -135,10 +190,10 @@
     <Compile Include="frmHome.Designer.cs">
       <DependentUpon>frmHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmReservations.cs">
+    <Compile Include="Reservations\frmReservations.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmReservations.Designer.cs">
+    <Compile Include="Reservations\frmReservations.Designer.cs">
       <DependentUpon>frmReservations.cs</DependentUpon>
     </Compile>
     <Compile Include="Services\frmServices.cs">
@@ -149,7 +204,25 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmUserInfo.resx">
+    <EmbeddedResource Include="frmFindUser.resx">
+      <DependentUpon>frmFindUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQueueManagement.resx">
+      <DependentUpon>frmQueueManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service Hours\frmServiceHours.resx">
+      <DependentUpon>frmServiceHours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service Hours\frmServiceHourSetup.resx">
+      <DependentUpon>frmServiceHourSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservations\frmAddEditReservation.resx">
+      <DependentUpon>frmAddEditReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucReservationInfo.resx">
+      <DependentUpon>ucReservationInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmUserInfo.resx">
       <DependentUpon>frmUserInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Services\frmAddEditService.resx">
@@ -157,6 +230,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Services\ucServiceInfo.resx">
       <DependentUpon>ucServiceInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\ucFindUser.resx">
+      <DependentUpon>ucFindUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service Hours\ucServiceHourCardInfo.resx">
+      <DependentUpon>ucServiceHourCardInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\ucFullUserInfo.resx">
       <DependentUpon>ucFullUserInfo.cs</DependentUpon>
@@ -185,7 +264,7 @@
     <EmbeddedResource Include="frmMainMenu.resx">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmReservations.resx">
+    <EmbeddedResource Include="Reservations\frmReservations.resx">
       <DependentUpon>frmReservations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Services\frmServices.resx">
@@ -193,14 +272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -274,6 +348,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\add_240dp_000000_FILL1_wght400_GRAD0_opsz48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter_alt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\article_person.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\event_list.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

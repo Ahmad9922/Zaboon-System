@@ -178,6 +178,23 @@ namespace ZaboonBL
             }
         }
 
+        public static clsUser Find(string UserName)
+        {
+            clsUserDataAccess.clsUserData UserData = new clsUserDataAccess.clsUserData();
+
+            UserData.UserName = UserName;
+
+            if (clsUserDataAccess.GetByUserName(UserData))
+            {
+                return new clsUser(UserData);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+
         public static bool IsExist(int UserID)
         {
             return clsUserDataAccess.IsExist(UserID);

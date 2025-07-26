@@ -132,5 +132,11 @@ namespace Zaboon
                 }
             }
         }
+
+        private void btnServiceHours_Click(object sender, EventArgs e)
+        {
+            frmServiceHours frmServiceHours = new frmServiceHours(Service.ServiceHours, Service.ServiceID.Value);
+            frmServiceHours.ShowDialog();
+        }
     }
 }

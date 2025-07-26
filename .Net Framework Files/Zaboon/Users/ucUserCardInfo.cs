@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ZaboonBL;
-using static Guna.UI2.Native.WinApi;
 
 namespace Zaboon
 {
@@ -21,15 +20,18 @@ namespace Zaboon
 
         public clsUser User { get; set; }
 
+        private bool _ShowDeleteButton;
+        [DefaultValue(true)]
         public bool ShowDeleteButton
         {
             get
             {
-                return btnDelete.Visible;
+                return _ShowDeleteButton;
             }
 
             set
             {
+                _ShowDeleteButton = value;
                 btnDelete.Visible = value;
             }
         }
@@ -58,20 +60,21 @@ namespace Zaboon
         {
             LoadImage();
             txtUserName.Text = User.UserName;
+            txtCreateDate.Text = User.CreateDate.ToShortDateString();
 
             if (!User.IsActive)
             {
                 guna2ShadowPanel1.FillColor = Color.Silver;
                 guna2ShapesTool1.BorderColor = Color.Silver;
-                txtUserName.FillColor = Color.Silver;
-                txtUserName.ForeColor = Color.White;
+                txtUserName.FillColor = Color.WhiteSmoke;
+                txtUserName.ForeColor = Color.FromArgb(125, 137, 149);
             }
             else
             {
                 guna2ShadowPanel1.FillColor = Color.White;
                 guna2ShapesTool1.BorderColor = Color.White;
-                txtUserName.FillColor = Color.White;
-                txtUserName.ForeColor = Color.Silver;
+                txtUserName.FillColor = Color.WhiteSmoke;
+                txtUserName.ForeColor = Color.FromArgb(125, 137, 149);
             }
         }
 
@@ -81,6 +84,18 @@ namespace Zaboon
             {
                 LoadInfo();
             }
+
+            NoSetNoUserProperties("The entered user id is not valid");
+        }
+
+        public void FillUser(string UserName)
+        {
+            if ((User = clsUser.Find(UserName)) != null)
+            {
+                LoadInfo();
+            }
+
+            NoSetNoUserProperties("The entered username is not valid");
         }
 
         public void FillUser(clsUser User)
@@ -91,6 +106,8 @@ namespace Zaboon
             {
                 LoadInfo();
             }
+
+            NoSetNoUserProperties("User not found");
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -130,12 +147,44 @@ namespace Zaboon
         {
             guna2ShapesTool1.FillColor = Color.Transparent;
 
-            frmUserInfo UserInfo = new frmUserInfo(User);
-            UserInfo.ShowDialog();
+            if (User != null)
+            {
+                frmUserInfo UserInfo = new frmUserInfo(User);
+                UserInfo.ShowDialog();
 
-            LoadInfo();
+                LoadInfo();
 
-            UserInfoClosed?.Invoke(this, EventArgs.Empty);
+                UserInfoClosed?.Invoke(this, EventArgs.Empty);
+            }
+        }
+
+        private void NoSetNoUserProperties(string Message)
+        {
+            if (User == null)
+            {
+                lblNoUserMessage.Text = Message;
+
+                lblNoUserMessage.Visible = true;
+                pbAccountImage.Visible = false;
+                txtUserName.Visible = false;
+                btnDelete.Visible = false;
+                guna2TextBox6.Visible = false;
+                txtCreateDate.Visible = false;
+            }
+            else
+            {
+                lblNoUserMessage.Visible = false;
+                pbAccountImage.Visible = true;
+                txtUserName.Visible = true;
+                btnDelete.Visible = ShowDeleteButton;
+                guna2TextBox6.Visible = true;
+                txtCreateDate.Visible = true;
+            }
+        }
+
+        private void ucUserCardInfo_Load(object sender, EventArgs e)
+        {
+            NoSetNoUserProperties("No user has been assigned yet");
         }
     }
 }

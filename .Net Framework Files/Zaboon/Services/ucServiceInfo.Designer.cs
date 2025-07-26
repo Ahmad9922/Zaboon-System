@@ -29,17 +29,19 @@
         private void InitializeComponent()
         {
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.btnServiceHours = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.txtDescription = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtFees = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel1.Controls.Add(this.btnServiceHours);
             this.guna2ShadowPanel1.Controls.Add(this.btnDelete);
             this.guna2ShadowPanel1.Controls.Add(this.txtDescription);
             this.guna2ShadowPanel1.Controls.Add(this.btnEdit);
@@ -53,6 +55,49 @@
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Silver;
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(329, 154);
             this.guna2ShadowPanel1.TabIndex = 7;
+            // 
+            // btnServiceHours
+            // 
+            this.btnServiceHours.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnServiceHours.AutoRoundedCorners = true;
+            this.btnServiceHours.BackColor = System.Drawing.Color.Transparent;
+            this.btnServiceHours.BorderRadius = 14;
+            this.btnServiceHours.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnServiceHours.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnServiceHours.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnServiceHours.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnServiceHours.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.btnServiceHours.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnServiceHours.ForeColor = System.Drawing.Color.White;
+            this.btnServiceHours.HoverState.FillColor = System.Drawing.Color.Gainsboro;
+            this.btnServiceHours.Image = global::Zaboon.Properties.Resources.clock;
+            this.btnServiceHours.Location = new System.Drawing.Point(214, 17);
+            this.btnServiceHours.Name = "btnServiceHours";
+            this.btnServiceHours.Size = new System.Drawing.Size(30, 30);
+            this.btnServiceHours.TabIndex = 8;
+            this.btnServiceHours.Click += new System.EventHandler(this.btnServiceHours_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.AutoRoundedCorners = true;
+            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.BorderRadius = 14;
+            this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDelete.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.HoverState.FillColor = System.Drawing.Color.Gainsboro;
+            this.btnDelete.Image = global::Zaboon.Properties.Resources.Delete;
+            this.btnDelete.ImageSize = new System.Drawing.Size(15, 15);
+            this.btnDelete.Location = new System.Drawing.Point(250, 17);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(30, 30);
+            this.btnDelete.TabIndex = 7;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // txtDescription
             // 
@@ -127,7 +172,7 @@
             this.txtName.PlaceholderText = "";
             this.txtName.ReadOnly = true;
             this.txtName.SelectedText = "";
-            this.txtName.Size = new System.Drawing.Size(267, 36);
+            this.txtName.Size = new System.Drawing.Size(195, 36);
             this.txtName.TabIndex = 1;
             this.txtName.WordWrap = false;
             // 
@@ -159,28 +204,6 @@
             this.txtFees.TabIndex = 6;
             this.txtFees.WordWrap = false;
             // 
-            // btnDelete
-            // 
-            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete.AutoRoundedCorners = true;
-            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
-            this.btnDelete.BorderRadius = 14;
-            this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDelete.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.HoverState.FillColor = System.Drawing.Color.Gainsboro;
-            this.btnDelete.Image = global::Zaboon.Properties.Resources.Delete;
-            this.btnDelete.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnDelete.Location = new System.Drawing.Point(250, 17);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(30, 30);
-            this.btnDelete.TabIndex = 7;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
             // ucServiceInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -201,5 +224,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtName;
         private Guna.UI2.WinForms.Guna2TextBox txtFees;
         private Guna.UI2.WinForms.Guna2Button btnDelete;
+        private Guna.UI2.WinForms.Guna2Button btnServiceHours;
     }
 }

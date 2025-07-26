@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.txtDescription = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.nudFees = new Guna.UI2.WinForms.Guna2NumericUpDown();
@@ -38,48 +36,10 @@
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbIsActive = new Guna.UI2.WinForms.Guna2CheckBox();
             this.txtTitle = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudFees)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.BorderColor = System.Drawing.Color.LightGray;
-            this.btnCancel.BorderRadius = 12;
-            this.btnCancel.BorderThickness = 1;
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCancel.FillColor = System.Drawing.Color.White;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.btnCancel.Image = global::Zaboon.Properties.Resources.cancel1;
-            this.btnCancel.Location = new System.Drawing.Point(188, 382);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(99, 36);
-            this.btnCancel.TabIndex = 7;
-            this.btnCancel.Text = "Cancel";
-            // 
-            // btnSave
-            // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.BorderRadius = 12;
-            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSave.FillColor = System.Drawing.Color.LimeGreen;
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Image = global::Zaboon.Properties.Resources.save;
-            this.btnSave.Location = new System.Drawing.Point(293, 382);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(116, 36);
-            this.btnSave.TabIndex = 6;
-            this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtDescription
             // 
@@ -99,7 +59,7 @@
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PlaceholderText = "";
             this.txtDescription.SelectedText = "";
-            this.txtDescription.Size = new System.Drawing.Size(300, 141);
+            this.txtDescription.Size = new System.Drawing.Size(300, 311);
             this.txtDescription.TabIndex = 5;
             // 
             // txtName
@@ -207,7 +167,7 @@
             this.guna2TextBox2.PlaceholderText = "";
             this.guna2TextBox2.ReadOnly = true;
             this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(91, 140);
+            this.guna2TextBox2.Size = new System.Drawing.Size(91, 310);
             this.guna2TextBox2.TabIndex = 16;
             this.guna2TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -221,7 +181,7 @@
             this.cbIsActive.CheckedState.FillColor = System.Drawing.Color.LimeGreen;
             this.cbIsActive.CheckState = System.Windows.Forms.CheckState.Indeterminate;
             this.cbIsActive.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.cbIsActive.Location = new System.Drawing.Point(20, 329);
+            this.cbIsActive.Location = new System.Drawing.Point(12, 483);
             this.cbIsActive.Name = "cbIsActive";
             this.cbIsActive.Size = new System.Drawing.Size(78, 21);
             this.cbIsActive.TabIndex = 17;
@@ -234,6 +194,8 @@
             // 
             // txtTitle
             // 
+            this.txtTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTitle.BorderRadius = 12;
             this.txtTitle.BorderThickness = 0;
             this.txtTitle.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -253,9 +215,49 @@
             this.txtTitle.PlaceholderText = "";
             this.txtTitle.ReadOnly = true;
             this.txtTitle.SelectedText = "";
-            this.txtTitle.Size = new System.Drawing.Size(397, 36);
+            this.txtTitle.Size = new System.Drawing.Size(401, 36);
             this.txtTitle.TabIndex = 18;
             this.txtTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.BorderRadius = 12;
+            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSave.FillColor = System.Drawing.Color.LimeGreen;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Image = global::Zaboon.Properties.Resources.save;
+            this.btnSave.Location = new System.Drawing.Point(296, 525);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(116, 36);
+            this.btnSave.TabIndex = 6;
+            this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancel.BorderColor = System.Drawing.Color.LightGray;
+            this.btnCancel.BorderRadius = 12;
+            this.btnCancel.BorderThickness = 1;
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCancel.FillColor = System.Drawing.Color.White;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.btnCancel.Image = global::Zaboon.Properties.Resources.cancel1;
+            this.btnCancel.Location = new System.Drawing.Point(191, 525);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(99, 36);
+            this.btnCancel.TabIndex = 7;
+            this.btnCancel.Text = "Cancel";
             // 
             // frmAddEditService
             // 
@@ -264,7 +266,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(421, 430);
+            this.ClientSize = new System.Drawing.Size(424, 573);
             this.Controls.Add(this.txtTitle);
             this.Controls.Add(this.cbIsActive);
             this.Controls.Add(this.guna2TextBox2);

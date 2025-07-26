@@ -22,6 +22,7 @@ namespace ZaboonBL
         public string Description { get; set; }
         public bool IsActive { get; set; }
         public decimal? Fees { get; set; }
+        public List<clsServiceHour> ServiceHours { get; set; }
         public enMode Mode { get; private set; }
 
         private clsService(string Name)
@@ -31,6 +32,7 @@ namespace ZaboonBL
             ServiceID = null;
             Description = null;
             Fees = null;
+            ServiceHours = null;
 
             IsActive = true;
 
@@ -44,6 +46,7 @@ namespace ZaboonBL
             Description = ServiceData.Description;
             IsActive = ServiceData.IsActive;
             Fees = ServiceData.Fees;
+            ServiceHours = clsServiceHour.GetServiceHours(ServiceID.Value);
 
             this.Mode = enMode.Update;
         }
@@ -98,7 +101,6 @@ namespace ZaboonBL
             }
 
             return false;
-
         }
 
         public bool Delete()
@@ -113,6 +115,22 @@ namespace ZaboonBL
             ServiceData.ServiceID = ServiceID;
 
             if (clsServiceDataAccess.GetByID(ServiceData))
+            {
+                return new clsService(ServiceData);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public static clsService Find(string Name)
+        {
+            clsServiceDataAccess.clsServiceData ServiceData = new clsServiceDataAccess.clsServiceData();
+
+            ServiceData.Name = Name;
+
+            if (clsServiceDataAccess.GetByName(ServiceData))
             {
                 return new clsService(ServiceData);
             }
@@ -154,26 +172,14 @@ namespace ZaboonBL
             return clsServiceDataAccess.GetList(new clsDataTypes.clsFilterData(Value, FieldName));
         }
 
-        private static List<clsService> _GetServices(List<clsServiceDataAccess.clsServiceData> ServicesData)
-        {
-            List<clsService> Services = new List<clsService>();
-
-            foreach (clsServiceDataAccess.clsServiceData ServiceData in ServicesData)
-            {
-                Services.Add(new clsService(ServiceData));
-            }
-
-            return Services;
-        }
-
         public static List<clsService> GetServices()
         {
-            return _GetServices(clsServiceDataAccess.GetServices());
+            return clsServiceDataAccess.GetServices().ConvertAll(S => new clsService(S)).ToList();
         }
 
         public static List<clsService> GetServices(string Name)
         {
-            return _GetServices(clsServiceDataAccess.GetServices(Name));
+            return clsServiceDataAccess.GetServices(Name).Select(S => new clsService(S)).ToList();
         }
     }
 }

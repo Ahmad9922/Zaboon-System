@@ -31,6 +31,17 @@ namespace ZaboonDAL
             }, Query, new SqlParameter("@ServiceID", ServiceData.ServiceID));
         }
 
+        public static bool GetByName(clsServiceData ServiceData)
+        {
+            string Query = "SELECT * FROM Services WHERE Name = @Name;";
+
+            return clsAdoQueryExecutor.ExecuteQuery(Command =>
+            {
+                return clsAdoQueryExecutor.ExecuteReader(Command, ServiceData);
+
+            }, Query, new SqlParameter("@Name", ServiceData.Name));
+        }
+
         public static int Add(clsServiceData ServiceData)
         {
             string Query = @"INSERT INTO [dbo].[Services] ( 

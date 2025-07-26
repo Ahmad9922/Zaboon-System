@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Zaboon
 {
-    public partial class frmReservations : Form
+    public partial class ucReservationInfo : UserControl
     {
-        public frmReservations()
+        public ucReservationInfo()
         {
             InitializeComponent();
         }

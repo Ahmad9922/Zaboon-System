@@ -49,7 +49,7 @@
             this.ucTabControl.TabProperties.ItemSize = new System.Drawing.Size(160, 40);
             this.ucTabControl.TabProperties.Location = new System.Drawing.Point(0, 0);
             this.ucTabControl.TabProperties.Name = "guna2TabControl1";
-            this.ucTabControl.TabProperties.Size = new System.Drawing.Size(1097, 641);
+            this.ucTabControl.TabProperties.Size = new System.Drawing.Size(1097, 630);
             this.ucTabControl.TabProperties.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
             this.ucTabControl.TabProperties.TabButtonHoverState.FillColor = System.Drawing.Color.MediumSeaGreen;
             this.ucTabControl.TabProperties.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);

@@ -48,7 +48,7 @@ namespace Zaboon
                 ucUserCardInfo UserInfo = new ucUserCardInfo();
 
                 UserInfo.FillUser(User);
-
+                UserInfo.ShowDeleteButton = true;
                 UserInfo.OnUserDeleted += UserInfo_OnUserDeleted;
 
                 flpAccountsList.Controls.Add(UserInfo);

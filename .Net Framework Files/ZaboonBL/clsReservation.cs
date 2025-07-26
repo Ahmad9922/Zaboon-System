@@ -14,24 +14,36 @@ namespace ZaboonBL
         public enum enMode
         {
             AddNew = 1,
-            Update = 2,
+            Update = 2
         }
+
+        public enum enReservationStatus
+        {
+            New = 1,
+            Cancelled = 2,
+            Completed = 3
+        }
+
         public int? ReservationID { get; set; }
         public clsUser User { get; set; }
         public DateTime ReservationDate { get; set; }
-        public byte ReservationStatus { get; set; }
+        public enReservationStatus ReservationStatus { get; set; }
         public decimal? PaidFees { get; set; }
         public clsService Service { get; set; }
+        public clsServiceHour ServiceHour { get; set; }
         public enMode Mode { get; private set; }
 
-        public clsReservation()
+        private clsReservation(clsUser User, clsService Service, clsServiceHour ServiceHour)
         {
             ReservationID = null;
-            User = null;
-            ReservationDate = DateTime.MinValue;
-            ReservationStatus = 0;
+
+            this.User = User;
+            this.Service = Service;
+            this.ServiceHour = ServiceHour;
+
+            ReservationDate = DateTime.Now;
+            ReservationStatus = enReservationStatus.New;
             PaidFees = null;
-            Service = null;
 
             this.Mode = enMode.AddNew;
         }
@@ -41,9 +53,10 @@ namespace ZaboonBL
             ReservationID = ReservationData.ReservationID;
             User = clsUser.Find(ReservationData.UserID);
             ReservationDate = ReservationData.ReservationDate;
-            ReservationStatus = ReservationData.ReservationStatus;
+            ReservationStatus = (enReservationStatus)ReservationData.ReservationStatus;
             PaidFees = ReservationData.PaidFees;
             Service = clsService.Find(ReservationData.ServiceID);
+            ServiceHour = clsServiceHour.Find(ReservationData.ServiceHourID);
 
             this.Mode = enMode.Update;
         }
@@ -55,9 +68,10 @@ namespace ZaboonBL
             ReservationData.ReservationID = ReservationID;
             ReservationData.UserID = User.UserID.Value;
             ReservationData.ReservationDate = ReservationDate;
-            ReservationData.ReservationStatus = ReservationStatus;
+            ReservationData.ReservationStatus = Convert.ToByte(ReservationStatus);
             ReservationData.PaidFees = PaidFees;
             ReservationData.ServiceID = Service.ServiceID.Value;
+            ReservationData.ServiceHourID = ServiceHour.ServiceHourID.Value;
 
             this.ReservationID = clsReservationDataAccess.Add(ReservationData);
 
@@ -71,9 +85,10 @@ namespace ZaboonBL
             ReservationData.ReservationID = ReservationID;
             ReservationData.UserID = User.UserID.Value;
             ReservationData.ReservationDate = ReservationDate;
-            ReservationData.ReservationStatus = ReservationStatus;
+            ReservationData.ReservationStatus = Convert.ToByte(ReservationStatus);
             ReservationData.PaidFees = PaidFees;
             ReservationData.ServiceID = Service.ServiceID.Value;
+            ReservationData.ServiceHourID = ServiceHour.ServiceHourID.Value;
 
             return clsReservationDataAccess.Update(ReservationData);
         }
@@ -103,6 +118,11 @@ namespace ZaboonBL
 
         }
 
+        public bool Delete()
+        {
+            return clsReservationDataAccess.Delete(ReservationID.Value);
+        }
+
         public static clsReservation Find(int ReservationID)
         {
             clsReservationDataAccess.clsReservationData ReservationData = new clsReservationDataAccess.clsReservationData();
@@ -117,6 +137,23 @@ namespace ZaboonBL
             {
                 return null;
             }
+        }
+
+        public static clsReservation Add(clsUser User, clsService Service, clsServiceHour ServiceHour)
+        {
+            if (User != null && Service != null)
+            {
+                return new clsReservation(User, Service, ServiceHour);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public static bool Delete(int ReservationID)
+        {
+            return clsReservationDataAccess.Delete(ReservationID);
         }
 
         public static bool IsExist(int ReservationID)
@@ -134,5 +171,24 @@ namespace ZaboonBL
             return clsReservationDataAccess.GetList(new clsDataTypes.clsFilterData(Value, FieldName));
         }
 
+        public static List<clsReservation> GetReservations()
+        {
+            return clsReservationDataAccess.GetReservations().Select(R => new clsReservation(R)).ToList();
+        }
+
+        public static List<clsReservation> GetReservations(int UserID)
+        {
+            return clsReservationDataAccess.GetReservations(UserID).Select(R => new clsReservation(R)).ToList();
+        }
+
+        public static List<clsReservation> GetReservations(int UserID, int ServiceID)
+        {
+            return clsReservationDataAccess.GetReservations(UserID, ServiceID).Select(R => new clsReservation(R)).ToList();
+        }
+
+        public static List<clsReservation> GetCurrentShiftReservations(int ServiceID)
+        {
+            return clsReservationDataAccess.GetCurrentShiftReservations(ServiceID).Select(R => new clsReservation(R)).ToList();
+        }
     }
 }

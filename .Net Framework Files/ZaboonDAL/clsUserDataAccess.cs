@@ -38,6 +38,17 @@ namespace ZaboonDAL
             }, Query, new SqlParameter("@UserID", UserData.UserID));
         }
 
+        public static bool GetByUserName(clsUserData UserData)
+        {
+            string Query = "SELECT * FROM Users WHERE UserName = @UserName;";
+
+            return clsAdoQueryExecutor.ExecuteQuery(Command =>
+            {
+                return clsAdoQueryExecutor.ExecuteReader(Command, UserData);
+
+            }, Query, new SqlParameter("@UserName", UserData.UserName));
+        }
+
         public static int Add(clsUserData UserData)
         {
             string Query = @"INSERT INTO [dbo].[Users] ( 
