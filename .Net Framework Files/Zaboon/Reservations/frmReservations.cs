@@ -71,8 +71,8 @@ namespace Zaboon
 
         private void btnQueueManagement_Click(object sender, EventArgs e)
         {
-            frmQueueManagement QueueManagementForm = new frmQueueManagement();
-            QueueManagementForm.ShowDialog();
+            //frmQueueManagement QueueManagementForm = new frmQueueManagement();
+            //QueueManagementForm.ShowDialog();
         }
     }
 }

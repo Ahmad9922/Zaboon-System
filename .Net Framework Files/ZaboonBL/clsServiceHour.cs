@@ -135,6 +135,11 @@ namespace ZaboonBL
             return IsSuccessful;
         }
 
+        public bool IsCurrentTimeInThisWorkHour()
+        {
+            return clsServiceHourDataAccess.IsCurrentTimeInThisWorkHour(ServiceHourID.Value);
+        }
+
         public static clsServiceHour Find(int ServiceHourID)
         {
             clsServiceHourDataAccess.clsServiceHourData ServiceHourData = new clsServiceHourDataAccess.clsServiceHourData();
@@ -169,6 +174,21 @@ namespace ZaboonBL
         public static bool IsExist(int ServiceHourID)
         {
             return clsServiceHourDataAccess.IsExist(ServiceHourID);
+        }
+
+        public static bool IsExist(TimeSpan WorkStartTime, TimeSpan WorkEndTime, int ServiceID)
+        {
+            return clsServiceHourDataAccess.IsExist(WorkStartTime, WorkEndTime, ServiceID);
+        }
+
+        public static clsServiceHour GetCurrentServiceHour(int ServiceID)
+        {
+            return new clsServiceHour(clsServiceHourDataAccess.GetCurrentServiceHour(ServiceID));
+        }
+
+        public static bool IsCurrentTimeInThisWorkHour(int ServiceHourID)
+        {
+            return clsServiceHourDataAccess.IsCurrentTimeInThisWorkHour(ServiceHourID);
         }
 
         public static bool Delete(int ServiceHourID)

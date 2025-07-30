@@ -12,7 +12,7 @@ using ZaboonBL;
 
 namespace Zaboon
 {
-    public partial class ucUserCardInfo : UserControl
+    public partial class ucUserInfoPanel : UserControl
     {
         public event EventHandler UserInfoClosed;
 
@@ -36,7 +36,7 @@ namespace Zaboon
             }
         }
 
-        public ucUserCardInfo()
+        public ucUserInfoPanel()
         {
             InitializeComponent();
         }
@@ -185,6 +185,12 @@ namespace Zaboon
         private void ucUserCardInfo_Load(object sender, EventArgs e)
         {
             NoSetNoUserProperties("No user has been assigned yet");
+        }
+
+        public void Clear()
+        {
+            User = null;
+            NoSetNoUserProperties($"No user has been assigned yet");
         }
     }
 }

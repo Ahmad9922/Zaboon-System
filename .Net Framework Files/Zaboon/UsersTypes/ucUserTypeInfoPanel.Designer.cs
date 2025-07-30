@@ -1,6 +1,6 @@
 ﻿namespace Zaboon
 {
-    partial class ucUserTypeInfo
+    partial class ucUserTypeInfoPanel
     {
         /// <summary> 
         /// Required designer variable.

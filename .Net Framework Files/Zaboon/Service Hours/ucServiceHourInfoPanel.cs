@@ -11,13 +11,13 @@ using ZaboonBL;
 
 namespace Zaboon
 {
-    public partial class ucServiceHourCardInfo : UserControl
+    public partial class ucServiceHourInfoPanel : UserControl
     {
         public clsServiceHour ServiceHour {  get; set; }
 
         public event EventHandler<clsServiceHour> OnServiceHourDeleted;
 
-        public ucServiceHourCardInfo()
+        public ucServiceHourInfoPanel()
         {
             InitializeComponent();
         }
@@ -79,6 +79,20 @@ namespace Zaboon
                         "other entities in the system.",
                         "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        private void btnQueueManagement_Click(object sender, EventArgs e)
+        {
+            if (ServiceHour.IsCurrentTimeInThisWorkHour())
+            {
+                frmQueueManagement QueueManagementForm = new frmQueueManagement(ServiceHour.ServiceID);
+                QueueManagementForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("The working hours for this service have not started yet",
+                       "Information", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
     }

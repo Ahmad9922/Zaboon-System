@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ucFullUserInfo1 = new Zaboon.ucFullUserInfo();
+            this.ucFullUserInfo1 = new Zaboon.ucFullUserInfoPanel();
             this.SuspendLayout();
             // 
             // ucFullUserInfo1
@@ -61,6 +61,6 @@
 
         #endregion
 
-        private ucFullUserInfo ucFullUserInfo1;
+        private ucFullUserInfoPanel ucFullUserInfo1;
     }
 }

@@ -23,10 +23,12 @@ namespace Zaboon
             frmUsers Users = new frmUsers();
             frmReservations Reservations = new frmReservations();
             frmServices services = new frmServices();
+            frmQueues Queues = new frmQueues();
 
             ucTabControl.SetForm(Home);
             ucTabControl.SetForm(Users, Users.frmUsers_Load);
             ucTabControl.SetForm(Reservations, Reservations.frmReservations_Load);
+            ucTabControl.SetForm(Queues, Queues.frmQueues_Load);
             ucTabControl.SetForm(services, services.frmServices_Load);
         }
     }

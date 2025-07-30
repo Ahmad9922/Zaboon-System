@@ -30,9 +30,9 @@ namespace Zaboon
             this.ServiceID = ServiceID;
         }
 
-        private ucServiceHourCardInfo InitializeControl(clsServiceHour ServiceHour)
+        private ucServiceHourInfoPanel InitializeControl(clsServiceHour ServiceHour)
         {
-            ucServiceHourCardInfo ServiceInfo = new ucServiceHourCardInfo();
+            ucServiceHourInfoPanel ServiceInfo = new ucServiceHourInfoPanel();
 
             ServiceInfo.Size = new Size(flpServiceHoursList.Width - 25, ServiceInfo.Height);
 

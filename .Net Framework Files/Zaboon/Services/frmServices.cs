@@ -20,11 +20,11 @@ namespace Zaboon
             InitializeComponent();
         }
 
-        private ucServiceInfo InitializeControl(clsService ServiceType)
+        private ucServiceInfoPanel InitializeControl(clsService Service)
         {
-            ucServiceInfo ucServiceInfo = new ucServiceInfo();
+            ucServiceInfoPanel ucServiceInfo = new ucServiceInfoPanel();
 
-            ucServiceInfo.FillService(ServiceType);
+            ucServiceInfo.FillService(Service);
 
             return ucServiceInfo;
         }
@@ -33,9 +33,9 @@ namespace Zaboon
         {
             flpServicesList.Controls.Clear();
 
-            foreach (clsService ServiceType in Services)
+            foreach (clsService Service in Services)
             {
-                flpServicesList.Controls.Add(InitializeControl(ServiceType));
+                flpServicesList.Controls.Add(InitializeControl(Service));
             }
         }
 
@@ -60,9 +60,9 @@ namespace Zaboon
             AddEditServiceForm.ShowDialog();
         }
 
-        private void AddEditServiceForm_OnSaveCompleted(object sender, clsService ServiceType)
+        private void AddEditServiceForm_OnSaveCompleted(object sender, clsService Service)
         {
-            flpServicesList.Controls.Add(InitializeControl(ServiceType));
+            flpServicesList.Controls.Add(InitializeControl(Service));
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)

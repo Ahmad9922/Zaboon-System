@@ -6,6 +6,7 @@ SELECT * FROM UsersTypes
 SELECT * FROM Services
 
 SELECT * FROM Reservations
+ORDER BY CreateDate
 
 SELECT * FROM ServiceHours
 
@@ -32,9 +33,8 @@ INNER JOIN Users ON Reservations.UserID = Users.UserID
 INNER JOIN Services ON Reservations.ServiceID = Services.ServiceID;
 
 
-UPDATE ServicesTypes
-SET Description = null
-WHERE ServiceTypeID < 3
+UPDATE Reservations
+SET CreateDate = GETDATE()
 
 TRuncate TABLE Reservations 
 
@@ -47,6 +47,30 @@ SELECT * FROM ServiceHours WHERE ServiceID = 2014
 
 SELECT DATEPART(WEEKDAY, GETDATE()) 
 
-SELECT * FROm ServiceHours
+SELECT * FROM Reservations
+WHERE ServiceHourID = (SELECT ServiceHourID FROm ServiceHours
 WHERE CAST(GETDATE() AS TIME) Between WorkStartTime AND WorkEndTime
-AND DayOfWeek = DATEPART(WEEKDAY, GETDATE()) - 1 AND ServiceID = 3
+AND DayOfWeek = DATEPART(WEEKDAY, GETDATE()) - 1 AND ServiceID = 1)
+AND ReservationDate = CAST(GETDATE() AS DATE) And ReservationStatus = 1
+ORDER BY CreateDate
+
+
+SELECT * FROM ServiceHours
+WHERE CAST(GETDATE() AS TIME) Between WorkStartTime AND WorkEndTime
+AND DayOfWeek = DATEPART(WEEKDAY, GETDATE()) - 1 AND ServiceID = 1
+
+SELECT ServiceHourID FROM ServiceHours
+WHERE CAST(GETDATE() AS TIME) Between WorkStartTime AND WorkEndTime
+AND DayOfWeek = 0 AND ServiceID = 1
+
+SELECT ServiceHourID FROM ServiceHours
+WHERE ServiceHourID = 2 AND CAST(GETDATE() AS TIME) Between WorkStartTime AND WorkEndTime
+AND DayOfWeek = DATEPART(WEEKDAY, GETDATE()) - 1
+
+DECLARE @WORKSTARTTIME TIME = '8:0:0';
+DECLARE @WORKSTARTTIME TIME = '8:0:0';
+
+SELECT ServiceHourID FROM ServiceHours
+WHERE @WORKSTARTTIME BETWEEN WorkStartTime And WorkEndTime 
+|| 
+AND DayOfWeek = 0 AND ServiceID = 1

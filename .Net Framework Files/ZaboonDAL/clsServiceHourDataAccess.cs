@@ -34,6 +34,23 @@ namespace ZaboonDAL
             
         }
 
+        public static clsServiceHourData GetCurrentServiceHour(int ServiceID)
+        {
+            clsServiceHourData ServiceHourData = new clsServiceHourData();
+
+            string Query = @"SELECT * FROM ServiceHours
+                             WHERE CAST(GETDATE() AS TIME) Between WorkStartTime AND WorkEndTime
+                             AND DayOfWeek = DATEPART(WEEKDAY, GETDATE()) - 1 AND ServiceID = @ServiceID";
+
+            clsAdoQueryExecutor.ExecuteQuery(Command =>
+            {
+                return clsAdoQueryExecutor.ExecuteReader(Command, ServiceHourData);
+
+            }, Query, new SqlParameter("@ServiceID", ServiceID));
+
+            return ServiceHourData;
+        }
+
         public static int Add(clsServiceHourData ServiceHourData)
         {
             string Query = @"INSERT INTO [dbo].[ServiceHours] ( 
@@ -99,7 +116,7 @@ namespace ZaboonDAL
 
         public static List<clsServiceHourData> GetServiceHours()
         {
-            string Query = @"SELECT * FROM ServiceHours";
+            string Query = @"SELECT * FROM ServiceHours ORDER BY DayOfWeek";
 
             return clsAdoQueryExecutor.ExecuteQuery(Command =>
             {
@@ -110,7 +127,7 @@ namespace ZaboonDAL
 
         public static List<clsServiceHourData> GetServiceHours(int ServiceID)
         {
-            string Query = @"SELECT * FROM ServiceHours WHERE ServiceID = @ServiceID";
+            string Query = @"SELECT * FROM ServiceHours WHERE ServiceID = @ServiceID ORDER BY DayOfWeek";
 
             return clsAdoQueryExecutor.ExecuteQuery(Command =>
             {
@@ -124,7 +141,7 @@ namespace ZaboonDAL
             string Query = @"SELECT ServiceHours.*
                              FROM ServiceHours INNER JOIN
                              Services ON ServiceHours.ServiceID = Services.ServiceID
-                             WHERE Services.Name = @Name";
+                             WHERE Services.Name = @Name ORDER BY DayOfWeek";
 
             return clsAdoQueryExecutor.ExecuteQuery(Command =>
             {
@@ -144,5 +161,28 @@ namespace ZaboonDAL
             }, Query, new SqlParameter("@ServiceHourID", ServiceHourID)) != null;
         }
 
+        public static bool IsExist(TimeSpan WorkStartTime, TimeSpan WorkEndTime, int ServiceHourID)
+        {
+            string Query = @"SELECT R = 1 FROM ServiceHours WHERE ServiceHourID = @ServiceHourID";
+
+            return clsAdoQueryExecutor.ExecuteQuery(Command =>
+            {
+                return clsAdoQueryExecutor.ExecuteScalar(Command);
+
+            }, Query, new SqlParameter("@ServiceHourID", ServiceHourID)) != null;
+        }
+
+        public static bool IsCurrentTimeInThisWorkHour(int ServiceHourID)
+        {
+            string Query = @"SELECT ServiceHourID FROM ServiceHours
+                             WHERE ServiceHourID = @ServiceHourID AND CAST(GETDATE() AS TIME) Between WorkStartTime AND WorkEndTime
+                             AND DayOfWeek = DATEPART(WEEKDAY, GETDATE()) - 1";
+
+            return clsAdoQueryExecutor.ExecuteQuery(Command =>
+            {
+                return clsAdoQueryExecutor.ExecuteScalar(Command);
+
+            }, Query, new SqlParameter("@ServiceHourID", ServiceHourID)) != null;
+        }
     }
 }

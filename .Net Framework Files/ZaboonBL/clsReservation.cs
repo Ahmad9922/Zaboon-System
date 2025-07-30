@@ -31,6 +31,7 @@ namespace ZaboonBL
         public decimal? PaidFees { get; set; }
         public clsService Service { get; set; }
         public clsServiceHour ServiceHour { get; set; }
+        public DateTime CreateDate { get; set; }
         public enMode Mode { get; private set; }
 
         private clsReservation(clsUser User, clsService Service, clsServiceHour ServiceHour)
@@ -44,6 +45,7 @@ namespace ZaboonBL
             ReservationDate = DateTime.Now;
             ReservationStatus = enReservationStatus.New;
             PaidFees = null;
+            CreateDate = DateTime.Now;
 
             this.Mode = enMode.AddNew;
         }
@@ -57,6 +59,7 @@ namespace ZaboonBL
             PaidFees = ReservationData.PaidFees;
             Service = clsService.Find(ReservationData.ServiceID);
             ServiceHour = clsServiceHour.Find(ReservationData.ServiceHourID);
+            CreateDate = ReservationData.CreateDate;
 
             this.Mode = enMode.Update;
         }
@@ -186,9 +189,9 @@ namespace ZaboonBL
             return clsReservationDataAccess.GetReservations(UserID, ServiceID).Select(R => new clsReservation(R)).ToList();
         }
 
-        public static List<clsReservation> GetCurrentShiftReservations(int ServiceID)
+        public static List<clsReservation> GetCurrentServiceHourReservations(int ServiceID)
         {
-            return clsReservationDataAccess.GetCurrentShiftReservations(ServiceID).Select(R => new clsReservation(R)).ToList();
+            return clsReservationDataAccess.GetCurrentServiceHourReservations(ServiceID).Select(R => new clsReservation(R)).ToList();
         }
     }
 }

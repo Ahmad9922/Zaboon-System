@@ -137,5 +137,17 @@ namespace ZaboonDAL
             }, Query, new SqlParameter("@ServiceID", ServiceID)) != null;
         }
 
+        public static bool IsWorkTimeNow(int ServiceID)
+        {
+            string Query = @"SELECT ServiceHourID FROM ServiceHours
+                             WHERE CAST(GETDATE() AS TIME) Between WorkStartTime AND WorkEndTime
+                             AND DayOfWeek = DATEPART(WEEKDAY, GETDATE()) - 1 AND ServiceID = @ServiceID";
+
+            return clsAdoQueryExecutor.ExecuteQuery(Command =>
+            {
+                return clsAdoQueryExecutor.ExecuteScalar(Command);
+
+            }, Query, new SqlParameter("@ServiceID", ServiceID)) != null;
+        }
     }
 }

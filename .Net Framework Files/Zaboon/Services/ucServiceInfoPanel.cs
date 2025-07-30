@@ -11,7 +11,7 @@ using ZaboonBL;
 
 namespace Zaboon
 {
-    public partial class ucServiceInfo : UserControl
+    public partial class ucServiceInfoPanel : UserControl
     {
         public clsService Service { get; set; }
 
@@ -44,7 +44,20 @@ namespace Zaboon
             }
         }
 
-        public ucServiceInfo()
+        public bool ShowServiceHoursButton
+        {
+            get
+            {
+                return btnServiceHours.Visible;
+            }
+
+            set
+            {
+                btnServiceHours.Visible = value;
+            }
+        }
+
+        public ucServiceInfoPanel()
         {
             InitializeComponent();
         }

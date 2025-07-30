@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.ucUserCardInfo1 = new Zaboon.ucUserCardInfo();
+            this.ucUserCardInfo1 = new Zaboon.ucUserInfoPanel();
             this.SuspendLayout();
             // 
             // txtSearch
@@ -84,7 +84,7 @@
 
         #endregion
 
-        private ucUserCardInfo ucUserCardInfo1;
+        private ucUserInfoPanel ucUserCardInfo1;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
     }
 }

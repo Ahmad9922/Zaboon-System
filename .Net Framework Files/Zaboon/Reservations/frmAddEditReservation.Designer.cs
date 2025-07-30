@@ -42,7 +42,7 @@
             this.flpServiceHours = new System.Windows.Forms.FlowLayoutPanel();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
-            this.ucUserCardInfo1 = new Zaboon.ucUserCardInfo();
+            this.ucUserCardInfo1 = new Zaboon.ucUserInfoPanel();
             ((System.ComponentModel.ISupportInitialize)(this.nudPaidFees)).BeginInit();
             this.SuspendLayout();
             // 
@@ -375,6 +375,6 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
         private System.Windows.Forms.FlowLayoutPanel flpServiceHours;
-        private ucUserCardInfo ucUserCardInfo1;
+        private ucUserInfoPanel ucUserCardInfo1;
     }
 }

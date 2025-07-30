@@ -20,7 +20,7 @@ namespace ZaboonDAL
             public decimal? PaidFees { get; set; }
             public int ServiceID { get; set; }
             public int ServiceHourID { get; set; }
-
+            public DateTime CreateDate { get; set; }
         }
 
         public static bool GetByID(clsReservationData ReservationData)
@@ -136,13 +136,13 @@ namespace ZaboonDAL
             });
         }
 
-        public static List<clsReservationData> GetCurrentShiftReservations(int ServiceID)
+        public static List<clsReservationData> GetCurrentServiceHourReservations(int ServiceID)
         {
             string Query = @"SELECT * FROM Reservations
                              WHERE ServiceHourID = (SELECT ServiceHourID FROm ServiceHours
                              WHERE CAST(GETDATE() AS TIME) Between WorkStartTime AND WorkEndTime
                              AND DayOfWeek = DATEPART(WEEKDAY, GETDATE()) - 1 AND ServiceID = @ServiceID)
-                             AND ReservationDate = CAST(GETDATE() AS DATE)";
+                             AND ReservationDate = CAST(GETDATE() AS DATE) And ReservationStatus = 1 ORDER BY CreateDate";
 
             return clsAdoQueryExecutor.ExecuteQuery(Command =>
             {

@@ -11,13 +11,13 @@ using ZaboonBL;
 
 namespace Zaboon
 {
-    public partial class ucUserTypeInfo : UserControl
+    public partial class ucUserTypeInfoPanel : UserControl
     {
         public event EventHandler EditClosed;
 
         public clsUserType UserType { get; set; }
 
-        public ucUserTypeInfo()
+        public ucUserTypeInfoPanel()
         {
             InitializeComponent();
         }

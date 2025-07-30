@@ -1,6 +1,6 @@
 ﻿namespace Zaboon
 {
-    partial class ucServiceHourCardInfo
+    partial class ucServiceHourInfoPanel
     {
         /// <summary> 
         /// Required designer variable.
@@ -36,6 +36,7 @@
             this.txtTitle = new CustomControls.UCTitle();
             this.ucTitle4 = new CustomControls.UCTitle();
             this.txtDayOfWeek = new CustomControls.UCTitle();
+            this.btnQueueManagement = new Guna.UI2.WinForms.Guna2Button();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
@@ -142,7 +143,7 @@
             this.txtTitle.Location = new System.Drawing.Point(112, 6);
             this.txtTitle.MultiLine = false;
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(364, 38);
+            this.txtTitle.Size = new System.Drawing.Size(320, 38);
             this.txtTitle.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Default;
             this.txtTitle.TabIndex = 7;
             this.txtTitle.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -183,6 +184,27 @@
             this.txtDayOfWeek.TabIndex = 9;
             this.txtDayOfWeek.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtDayOfWeek.Title = "Day Of Week";
+            // 
+            // btnQueueManagement
+            // 
+            this.btnQueueManagement.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnQueueManagement.AutoRoundedCorners = true;
+            this.btnQueueManagement.BackColor = System.Drawing.Color.Transparent;
+            this.btnQueueManagement.BorderRadius = 18;
+            this.btnQueueManagement.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnQueueManagement.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnQueueManagement.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnQueueManagement.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnQueueManagement.FillColor = System.Drawing.Color.LightGray;
+            this.btnQueueManagement.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnQueueManagement.ForeColor = System.Drawing.Color.White;
+            this.btnQueueManagement.HoverState.FillColor = System.Drawing.Color.Gainsboro;
+            this.btnQueueManagement.Image = global::Zaboon.Properties.Resources.wc_240dp_FFFFFF_FILL1_wght400_GRAD0_opsz48;
+            this.btnQueueManagement.Location = new System.Drawing.Point(438, 6);
+            this.btnQueueManagement.Name = "btnQueueManagement";
+            this.btnQueueManagement.Size = new System.Drawing.Size(38, 38);
+            this.btnQueueManagement.TabIndex = 11;
+            this.btnQueueManagement.Click += new System.EventHandler(this.btnQueueManagement_Click);
             // 
             // btnDelete
             // 
@@ -226,11 +248,12 @@
             this.btnEdit.TabIndex = 5;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // ucServiceHour
+            // ucServiceHourCardInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnQueueManagement);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.txtDayOfWeek);
             this.Controls.Add(this.ucTitle4);
@@ -241,7 +264,7 @@
             this.Controls.Add(this.ucTitle3);
             this.Controls.Add(this.txtStartTime);
             this.Controls.Add(this.ucTitle1);
-            this.Name = "ucServiceHour";
+            this.Name = "ucServiceHourCardInfo";
             this.Size = new System.Drawing.Size(567, 181);
             this.ResumeLayout(false);
 
@@ -259,5 +282,6 @@
         private CustomControls.UCTitle ucTitle4;
         private CustomControls.UCTitle txtDayOfWeek;
         private Guna.UI2.WinForms.Guna2Button btnDelete;
+        private Guna.UI2.WinForms.Guna2Button btnQueueManagement;
     }
 }

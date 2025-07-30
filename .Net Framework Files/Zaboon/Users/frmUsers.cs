@@ -45,7 +45,7 @@ namespace Zaboon
         {
             foreach (clsUser User in Users)
             {
-                ucUserCardInfo UserInfo = new ucUserCardInfo();
+                ucUserInfoPanel UserInfo = new ucUserInfoPanel();
 
                 UserInfo.FillUser(User);
                 UserInfo.ShowDeleteButton = true;
@@ -57,7 +57,7 @@ namespace Zaboon
 
         private void UserInfo_OnUserDeleted(object sender, EventArgs e)
         {
-            flpAccountsList.Controls.Remove((ucUserCardInfo)sender);
+            flpAccountsList.Controls.Remove((ucUserInfoPanel)sender);
         }
 
         private void LoadUsers()

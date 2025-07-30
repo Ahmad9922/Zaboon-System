@@ -13,7 +13,7 @@ using static ZaboonBL.clsUserType;
 
 namespace Zaboon
 {
-    public partial class ucFullUserInfo : UserControl
+    public partial class ucFullUserInfoPanel : UserControl
     {
         public event EventHandler CancelButtonClick;
         public event EventHandler EditButtonClick;
@@ -21,7 +21,7 @@ namespace Zaboon
 
         public clsUser User { get; set; }
 
-        public ucFullUserInfo()
+        public ucFullUserInfoPanel()
         {
             InitializeComponent();
         }

@@ -3,22 +3,26 @@
   "WorkspaceRootPath": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\Zaboon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DD4FA35C-0B33-4F45-8100-A8B89D3B494E}|..\\ZaboonDAL\\ZaboonDAL.csproj|c:\\users\\\u0623\u062D\u0645\u062F\\source\\repos\\zaboon\\.net framework files\\zaboondal\\clsreservationdataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B3C5413E-19EA-4BAB-B256-A5278BA2D6A7}|..\\ZaboonBL\\ZaboonBL.csproj|c:\\users\\\u0623\u062D\u0645\u062F\\source\\repos\\zaboon\\.net framework files\\zaboonbl\\clsservicehour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|c:\\users\\\u0623\u062D\u0645\u062F\\source\\repos\\zaboon\\.net framework files\\zaboon\\reservations\\frmreservations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|solutionrelative:reservations\\frmreservations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{DD4FA35C-0B33-4F45-8100-A8B89D3B494E}|..\\ZaboonDAL\\ZaboonDAL.csproj|c:\\users\\\u0623\u062D\u0645\u062F\\source\\repos\\zaboon\\.net framework files\\zaboondal\\clsservicehourdataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\Zaboon\\frmqueuemanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|solutionrelative:frmqueuemanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|c:\\users\\\u0623\u062D\u0645\u062F\\source\\repos\\zaboon\\.net framework files\\zaboon\\queues\\frmqueues.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|solutionrelative:queues\\frmqueues.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|c:\\users\\\u0623\u062D\u0645\u062F\\source\\repos\\zaboon\\.net framework files\\zaboon\\frmhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|solutionrelative:frmhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|c:\\users\\\u0623\u062D\u0645\u062F\\source\\repos\\zaboon\\.net framework files\\zaboon\\service hours\\frmservicehours.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|solutionrelative:service hours\\frmservicehours.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3C5413E-19EA-4BAB-B256-A5278BA2D6A7}|..\\ZaboonBL\\ZaboonBL.csproj|c:\\users\\\u0623\u062D\u0645\u062F\\source\\repos\\zaboon\\.net framework files\\zaboonbl\\clsreservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|c:\\users\\\u0623\u062D\u0645\u062F\\source\\repos\\zaboon\\.net framework files\\zaboon\\service hours\\frmservicehoursetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|solutionrelative:service hours\\frmservicehoursetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|c:\\users\\\u0623\u062D\u0645\u062F\\source\\repos\\zaboon\\.net framework files\\zaboon\\service hours\\frmservicehoursetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FB40E3E-144A-4FF7-8052-631C285EE64A}|Zaboon.csproj|solutionrelative:service hours\\frmservicehoursetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -28,7 +32,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -56,64 +60,77 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmHome.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\Zaboon\\frmHome.cs",
-              "RelativeDocumentMoniker": "frmHome.cs",
-              "ToolTip": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\Zaboon\\frmHome.cs [Design]",
-              "RelativeToolTip": "frmHome.cs [Design]",
+              "DocumentIndex": 1,
+              "Title": "clsServiceHourDataAccess.cs",
+              "DocumentMoniker": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\ZaboonDAL\\clsServiceHourDataAccess.cs",
+              "RelativeDocumentMoniker": "..\\ZaboonDAL\\clsServiceHourDataAccess.cs",
+              "ToolTip": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\ZaboonDAL\\clsServiceHourDataAccess.cs",
+              "RelativeToolTip": "..\\ZaboonDAL\\clsServiceHourDataAccess.cs",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAowKMAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T15:53:04.638Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "clsReservation.cs",
-              "DocumentMoniker": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\ZaboonBL\\clsReservation.cs",
-              "RelativeDocumentMoniker": "..\\ZaboonBL\\clsReservation.cs",
-              "ToolTip": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\ZaboonBL\\clsReservation.cs",
-              "RelativeToolTip": "..\\ZaboonBL\\clsReservation.cs",
-              "ViewState": "AgIAAKMAAAAAAAAAAAA9wLwAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T14:31:46.919Z",
+              "WhenOpened": "2025-07-30T14:08:38.833Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "clsReservationDataAccess.cs",
-              "DocumentMoniker": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\ZaboonDAL\\clsReservationDataAccess.cs",
-              "RelativeDocumentMoniker": "..\\ZaboonDAL\\clsReservationDataAccess.cs",
-              "ToolTip": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\ZaboonDAL\\clsReservationDataAccess.cs",
-              "RelativeToolTip": "..\\ZaboonDAL\\clsReservationDataAccess.cs",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAqwIoAAABKAAAAAAAAAA==",
+              "Title": "clsServiceHour.cs",
+              "DocumentMoniker": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\ZaboonBL\\clsServiceHour.cs",
+              "RelativeDocumentMoniker": "..\\ZaboonBL\\clsServiceHour.cs",
+              "ToolTip": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\ZaboonBL\\clsServiceHour.cs",
+              "RelativeToolTip": "..\\ZaboonBL\\clsServiceHour.cs",
+              "ViewState": "AgIAAKQAAAAAAAAAAIAwwLAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T11:08:18.078Z",
+              "WhenOpened": "2025-07-30T13:52:14.395Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmReservations.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\Zaboon\\Reservations\\frmReservations.cs",
-              "RelativeDocumentMoniker": "Reservations\\frmReservations.cs",
-              "ToolTip": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\Zaboon\\Reservations\\frmReservations.cs [Design]",
-              "RelativeToolTip": "Reservations\\frmReservations.cs [Design]",
+              "DocumentIndex": 5,
+              "Title": "frmServiceHourSetup.cs",
+              "DocumentMoniker": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\Zaboon\\Service Hours\\frmServiceHourSetup.cs",
+              "RelativeDocumentMoniker": "Service Hours\\frmServiceHourSetup.cs",
+              "ToolTip": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\Zaboon\\Service Hours\\frmServiceHourSetup.cs",
+              "RelativeToolTip": "Service Hours\\frmServiceHourSetup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAtwBQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T10:48:05.544Z",
+              "WhenOpened": "2025-07-30T13:41:23.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmServiceHourSetup.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\Zaboon\\Service Hours\\frmServiceHourSetup.cs",
+              "RelativeDocumentMoniker": "Service Hours\\frmServiceHourSetup.cs",
+              "ToolTip": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\Zaboon\\Service Hours\\frmServiceHourSetup.cs [Design]",
+              "RelativeToolTip": "Service Hours\\frmServiceHourSetup.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T13:41:20.113Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmServiceHours.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\Zaboon\\Service Hours\\frmServiceHours.cs",
+              "RelativeDocumentMoniker": "Service Hours\\frmServiceHours.cs",
+              "ToolTip": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\Zaboon\\Service Hours\\frmServiceHours.cs [Design]",
+              "RelativeToolTip": "Service Hours\\frmServiceHours.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T13:41:02.25Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "frmQueueManagement.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\Zaboon\\frmQueueManagement.cs",
-              "RelativeDocumentMoniker": "frmQueueManagement.cs",
-              "ToolTip": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\Zaboon\\frmQueueManagement.cs [Design]",
-              "RelativeToolTip": "frmQueueManagement.cs [Design]",
+              "Title": "frmQueues.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\Zaboon\\Queues\\frmQueues.cs",
+              "RelativeDocumentMoniker": "Queues\\frmQueues.cs",
+              "ToolTip": "C:\\Users\\\u0623\u062D\u0645\u062F\\source\\repos\\Zaboon\\.Net Framework Files\\Zaboon\\Queues\\frmQueues.cs [Design]",
+              "RelativeToolTip": "Queues\\frmQueues.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T10:47:11.542Z",
+              "WhenOpened": "2025-07-30T07:00:26.122Z",
               "EditorCaption": " [Design]"
             }
           ]

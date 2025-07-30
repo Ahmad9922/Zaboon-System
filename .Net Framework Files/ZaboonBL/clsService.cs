@@ -6,6 +6,7 @@
  using System.Linq;
  using System.Text;
  using System.Threading.Tasks;
+using System.Runtime.Versioning;
 
 namespace ZaboonBL
 {
@@ -103,9 +104,24 @@ namespace ZaboonBL
             return false;
         }
 
+        public Queue<clsReservation> GetCurrentQueue()
+        {
+            return new Queue<clsReservation>(clsReservation.GetCurrentServiceHourReservations(ServiceID.Value));
+        }
+
+        public clsServiceHour GetCurrentServiceHour()
+        {
+            return clsServiceHour.GetCurrentServiceHour(ServiceID.Value);
+        }
+
         public bool Delete()
         {
             return clsServiceDataAccess.Delete(ServiceID.Value);
+        }
+
+        public bool IsWorkTimeNow()
+        {
+            return clsServiceDataAccess.IsWorkTimeNow(ServiceID.Value);
         }
 
         public static clsService Find(int ServiceID)
@@ -155,6 +171,11 @@ namespace ZaboonBL
         public static bool IsExist(int ServiceID)
         {
             return clsServiceDataAccess.IsExist(ServiceID);
+        }
+
+        public static bool IsWorkTimeNow(int ServiceID)
+        {
+            return clsServiceDataAccess.IsWorkTimeNow(ServiceID);
         }
 
         public static bool Delete(int ServiceID)

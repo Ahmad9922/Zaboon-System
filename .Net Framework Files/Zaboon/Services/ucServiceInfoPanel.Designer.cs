@@ -1,6 +1,6 @@
 ﻿namespace Zaboon
 {
-    partial class ucServiceInfo
+    partial class ucServiceInfoPanel
     {
         /// <summary> 
         /// Required designer variable.
@@ -35,16 +35,16 @@
             this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtFees = new Guna.UI2.WinForms.Guna2TextBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2ShadowPanel1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel1.Controls.Add(this.btnServiceHours);
-            this.guna2ShadowPanel1.Controls.Add(this.btnDelete);
+            this.guna2ShadowPanel1.Controls.Add(this.flowLayoutPanel1);
             this.guna2ShadowPanel1.Controls.Add(this.txtDescription);
-            this.guna2ShadowPanel1.Controls.Add(this.btnEdit);
             this.guna2ShadowPanel1.Controls.Add(this.txtName);
             this.guna2ShadowPanel1.Controls.Add(this.txtFees);
             this.guna2ShadowPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -71,7 +71,7 @@
             this.btnServiceHours.ForeColor = System.Drawing.Color.White;
             this.btnServiceHours.HoverState.FillColor = System.Drawing.Color.Gainsboro;
             this.btnServiceHours.Image = global::Zaboon.Properties.Resources.clock;
-            this.btnServiceHours.Location = new System.Drawing.Point(214, 17);
+            this.btnServiceHours.Location = new System.Drawing.Point(6, 3);
             this.btnServiceHours.Name = "btnServiceHours";
             this.btnServiceHours.Size = new System.Drawing.Size(30, 30);
             this.btnServiceHours.TabIndex = 8;
@@ -93,7 +93,7 @@
             this.btnDelete.HoverState.FillColor = System.Drawing.Color.Gainsboro;
             this.btnDelete.Image = global::Zaboon.Properties.Resources.Delete;
             this.btnDelete.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnDelete.Location = new System.Drawing.Point(250, 17);
+            this.btnDelete.Location = new System.Drawing.Point(42, 3);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(30, 30);
             this.btnDelete.TabIndex = 7;
@@ -142,7 +142,7 @@
             this.btnEdit.HoverState.FillColor = System.Drawing.Color.Gainsboro;
             this.btnEdit.Image = global::Zaboon.Properties.Resources.Edit;
             this.btnEdit.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnEdit.Location = new System.Drawing.Point(286, 17);
+            this.btnEdit.Location = new System.Drawing.Point(78, 3);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(30, 30);
             this.btnEdit.TabIndex = 4;
@@ -204,6 +204,17 @@
             this.txtFees.TabIndex = 6;
             this.txtFees.WordWrap = false;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.btnEdit);
+            this.flowLayoutPanel1.Controls.Add(this.btnDelete);
+            this.flowLayoutPanel1.Controls.Add(this.btnServiceHours);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(205, 15);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(111, 36);
+            this.flowLayoutPanel1.TabIndex = 9;
+            // 
             // ucServiceInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -212,6 +223,7 @@
             this.Name = "ucServiceInfo";
             this.Size = new System.Drawing.Size(329, 154);
             this.guna2ShadowPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -225,5 +237,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtFees;
         private Guna.UI2.WinForms.Guna2Button btnDelete;
         private Guna.UI2.WinForms.Guna2Button btnServiceHours;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

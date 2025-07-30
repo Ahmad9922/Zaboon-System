@@ -33,8 +33,8 @@
             this.btnAddUser = new Guna.UI2.WinForms.Guna2Button();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnSwitchType = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.ucEmployeeType = new Zaboon.ucUserTypeInfo();
-            this.ucClientUserType = new Zaboon.ucUserTypeInfo();
+            this.ucEmployeeType = new Zaboon.ucUserTypeInfoPanel();
+            this.ucClientUserType = new Zaboon.ucUserTypeInfoPanel();
             this.SuspendLayout();
             // 
             // flpAccountsList
@@ -46,7 +46,7 @@
             this.flpAccountsList.BackColor = System.Drawing.Color.White;
             this.flpAccountsList.Location = new System.Drawing.Point(13, 60);
             this.flpAccountsList.Name = "flpAccountsList";
-            this.flpAccountsList.Size = new System.Drawing.Size(908, 443);
+            this.flpAccountsList.Size = new System.Drawing.Size(908, 477);
             this.flpAccountsList.TabIndex = 1;
             // 
             // txtUserType
@@ -138,7 +138,7 @@
             // ucEmployeeType
             // 
             this.ucEmployeeType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ucEmployeeType.Location = new System.Drawing.Point(345, 509);
+            this.ucEmployeeType.Location = new System.Drawing.Point(345, 543);
             this.ucEmployeeType.Name = "ucEmployeeType";
             this.ucEmployeeType.Size = new System.Drawing.Size(336, 111);
             this.ucEmployeeType.TabIndex = 15;
@@ -148,7 +148,7 @@
             // ucClientUserType
             // 
             this.ucClientUserType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ucClientUserType.Location = new System.Drawing.Point(12, 509);
+            this.ucClientUserType.Location = new System.Drawing.Point(12, 543);
             this.ucClientUserType.Name = "ucClientUserType";
             this.ucClientUserType.Size = new System.Drawing.Size(336, 111);
             this.ucClientUserType.TabIndex = 14;
@@ -161,11 +161,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(933, 632);
+            this.ClientSize = new System.Drawing.Size(933, 666);
             this.Controls.Add(this.btnAddUser);
-            this.Controls.Add(this.ucEmployeeType);
-            this.Controls.Add(this.ucClientUserType);
             this.Controls.Add(this.flpAccountsList);
+            this.Controls.Add(this.ucClientUserType);
+            this.Controls.Add(this.ucEmployeeType);
             this.Controls.Add(this.txtUserType);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnSwitchType);
@@ -181,8 +181,8 @@
         private Guna.UI2.WinForms.Guna2CircleButton btnSwitchType;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private Guna.UI2.WinForms.Guna2TextBox txtUserType;
-        private ucUserTypeInfo ucClientUserType;
-        private ucUserTypeInfo ucEmployeeType;
+        private ucUserTypeInfoPanel ucClientUserType;
+        private ucUserTypeInfoPanel ucEmployeeType;
         private Guna.UI2.WinForms.Guna2Button btnAddUser;
     }
 }
