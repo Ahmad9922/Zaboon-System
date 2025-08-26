@@ -13,7 +13,7 @@ using static ZaboonBL.clsUserType;
 
 namespace Zaboon
 {
-    public partial class ucFullUserInfoPanel : UserControl
+    public partial class ucUserInfoPanel2 : UserControl
     {
         public event EventHandler CancelButtonClick;
         public event EventHandler EditButtonClick;
@@ -21,7 +21,7 @@ namespace Zaboon
 
         public clsUser User { get; set; }
 
-        public ucFullUserInfoPanel()
+        public ucUserInfoPanel2()
         {
             InitializeComponent();
         }
@@ -90,7 +90,7 @@ namespace Zaboon
         {
             CancelButtonClick?.Invoke(this, EventArgs.Empty);
 
-            SetShowInfoMode();
+            SetInfoMode();
         }
 
         private void SetUpdatedInfo()
@@ -124,7 +124,7 @@ namespace Zaboon
             }
         }
 
-        private void SetShowInfoMode()
+        private void SetInfoMode()
         {
             btnCancel.Visible = false;
             btnSave.Visible = false;
@@ -134,6 +134,7 @@ namespace Zaboon
             txtUserName.ReadOnly = true;
             txtEmail.ReadOnly = true;
             txtPhone.ReadOnly = true;
+            cbIsActive.Enabled = false;
 
             txtUserName.HoverState.BorderColor = Color.Gainsboro;
             txtEmail.HoverState.BorderColor = Color.Gainsboro;
@@ -157,6 +158,7 @@ namespace Zaboon
             txtUserName.ReadOnly = false;
             txtEmail.ReadOnly = false;
             txtPhone.ReadOnly = false;
+            cbIsActive.Enabled = true;
 
             txtUserName.HoverState.BorderColor = Color.SeaGreen;
             txtEmail.HoverState.BorderColor = Color.SeaGreen;
@@ -175,7 +177,7 @@ namespace Zaboon
         {
             if (SaveAccountInfo())
             {
-                SetShowInfoMode();
+                SetInfoMode();
             }
 
             pbAccountImage.Image = clsConverter.ToImage(User.ImageByte);

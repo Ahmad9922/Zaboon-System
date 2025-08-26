@@ -43,7 +43,7 @@
             this.flpServicesList.BackColor = System.Drawing.Color.White;
             this.flpServicesList.Location = new System.Drawing.Point(13, 68);
             this.flpServicesList.Name = "flpServicesList";
-            this.flpServicesList.Size = new System.Drawing.Size(906, 537);
+            this.flpServicesList.Size = new System.Drawing.Size(878, 537);
             this.flpServicesList.TabIndex = 2;
             // 
             // txtUserType
@@ -83,7 +83,7 @@
             this.btnAddService.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAddService.ForeColor = System.Drawing.Color.White;
             this.btnAddService.Image = global::Zaboon.Properties.Resources.Add;
-            this.btnAddService.Location = new System.Drawing.Point(819, 13);
+            this.btnAddService.Location = new System.Drawing.Point(791, 13);
             this.btnAddService.Name = "btnAddService";
             this.btnAddService.Size = new System.Drawing.Size(100, 36);
             this.btnAddService.TabIndex = 18;
@@ -119,7 +119,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(932, 617);
+            this.ClientSize = new System.Drawing.Size(904, 617);
             this.Controls.Add(this.btnAddService);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.txtUserType);

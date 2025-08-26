@@ -65,14 +65,12 @@ namespace Zaboon
             if (!User.IsActive)
             {
                 guna2ShadowPanel1.FillColor = Color.Silver;
-                guna2ShapesTool1.BorderColor = Color.Silver;
                 txtUserName.FillColor = Color.WhiteSmoke;
                 txtUserName.ForeColor = Color.FromArgb(125, 137, 149);
             }
             else
             {
                 guna2ShadowPanel1.FillColor = Color.White;
-                guna2ShapesTool1.BorderColor = Color.White;
                 txtUserName.FillColor = Color.WhiteSmoke;
                 txtUserName.ForeColor = Color.FromArgb(125, 137, 149);
             }
@@ -85,7 +83,7 @@ namespace Zaboon
                 LoadInfo();
             }
 
-            NoSetNoUserProperties("The entered user id is not valid");
+            UpdateUserUIState("The entered user id is not valid");
         }
 
         public void FillUser(string UserName)
@@ -95,7 +93,7 @@ namespace Zaboon
                 LoadInfo();
             }
 
-            NoSetNoUserProperties("The entered username is not valid");
+            UpdateUserUIState("The entered username is not valid");
         }
 
         public void FillUser(clsUser User)
@@ -107,7 +105,7 @@ namespace Zaboon
                 LoadInfo();
             }
 
-            NoSetNoUserProperties("User not found");
+            UpdateUserUIState("User not found");
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -133,19 +131,8 @@ namespace Zaboon
             }
         }
 
-        private void pbAccountImage_MouseLeave(object sender, EventArgs e)
-        {
-            guna2ShapesTool1.FillColor = Color.Transparent;
-        }
-
-        private void pbAccountImage_MouseEnter(object sender, EventArgs e)
-        {
-            guna2ShapesTool1.FillColor = Color.Gainsboro;
-        }
-
         private void pbAccountImage_Click(object sender, EventArgs e)
         {
-            guna2ShapesTool1.FillColor = Color.Transparent;
 
             if (User != null)
             {
@@ -158,25 +145,37 @@ namespace Zaboon
             }
         }
 
-        private void NoSetNoUserProperties(string Message)
+        /// <summary>
+        /// Updates the UI controls depending on whether a User exists or not.
+        /// If User is null, it shows a "no user" message and hides user details.
+        /// Otherwise, it displays the user information.
+        /// </summary>
+        /// <param name="message">The message to display when no user exists.</param>
+        private void UpdateUserUIState(string Message)
         {
             if (User == null)
             {
-                lblNoUserMessage.Text = Message;
 
+                // Show "no user" message
+                lblNoUserMessage.Text = Message;
                 lblNoUserMessage.Visible = true;
+
+                // Hide user-related controls
                 pbAccountImage.Visible = false;
                 txtUserName.Visible = false;
                 btnDelete.Visible = false;
                 guna2TextBox6.Visible = false;
                 txtCreateDate.Visible = false;
             }
-            else
+            else 
             {
+                // Hide "no user" message
                 lblNoUserMessage.Visible = false;
+
+                // Show user-related controls
                 pbAccountImage.Visible = true;
                 txtUserName.Visible = true;
-                btnDelete.Visible = ShowDeleteButton;
+                btnDelete.Visible = ShowDeleteButton; // depends on condition
                 guna2TextBox6.Visible = true;
                 txtCreateDate.Visible = true;
             }
@@ -184,13 +183,13 @@ namespace Zaboon
 
         private void ucUserCardInfo_Load(object sender, EventArgs e)
         {
-            NoSetNoUserProperties("No user has been assigned yet");
+            UpdateUserUIState("No user has been assigned yet");
         }
 
         public void Clear()
         {
             User = null;
-            NoSetNoUserProperties($"No user has been assigned yet");
+            UpdateUserUIState($"No user has been assigned yet");
         }
     }
 }

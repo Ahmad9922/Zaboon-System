@@ -61,10 +61,6 @@ namespace Zaboon
             txtTitle.Text = ServiceHour.Title;
             cbDaysOfWeek.Text = ServiceHour.DayOfWeek.ToString();
 
-            //ucTimeRangePicker1.Value = new CustomControls.UCTimeRangePicker.TimeRange();
-            //ucTimeRangePicker1.Value.StartTime = ServiceHour.WorkStartTime;
-            //ucTimeRangePicker1.Value.EndTime = ServiceHour.WorkEndTime;
-
             CustomControls.UCTimeRangePicker.TimeRange Range = new CustomControls.UCTimeRangePicker.TimeRange();
             Range.StartTime = ServiceHour.WorkStartTime;
             Range.EndTime = ServiceHour.WorkEndTime;
@@ -89,24 +85,37 @@ namespace Zaboon
             ServiceHour.Title = txtTitle.Text;
         }
 
+        private bool ValidateServiceHour()
+        {
+            return !ServiceHour.Exists();
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             PrepareServiceHourObject();
 
-            if (ServiceHour.Save())
+            if (ValidateServiceHour())
             {
-                MessageBox.Show("The service hour has been saved successfully .",
-                    "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (ServiceHour.Save())
+                {
+                    MessageBox.Show("The service hour has been saved successfully .",
+                        "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                OnSaveSuccessfully?.Invoke(this, ServiceHour);
+                    OnSaveSuccessfully?.Invoke(this, ServiceHour);
 
-                this.Close();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to save the service hour. If the problem persists," +
+                        " please seek assistance from the Service and Maintenance Center",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                MessageBox.Show("Failed to save the service hour. If the problem persists," +
-                    " please seek assistance from the Service and Maintenance Center",
-                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Sorry, the specified time range overlaps with an existing service hour.",
+                       "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

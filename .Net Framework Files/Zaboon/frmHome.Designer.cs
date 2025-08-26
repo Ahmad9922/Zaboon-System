@@ -28,54 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ucEmployeesDashboard1 = new Zaboon.ucEmployeesDashboard();
-            this.ucClientsDashboard1 = new Zaboon.ucClientsDashboard();
-            this.ucQueueDashboard1 = new Zaboon.ucQueueDashboard();
+            this.ucReservationsDashboard1 = new Zaboon.ucReservationsDashboard();
+            this.uc_UsersStatistics1 = new Zaboon.ucUsersStatistics();
             this.SuspendLayout();
             // 
-            // ucEmployeesDashboard1
+            // ucReservationsDashboard1
             // 
-            this.ucEmployeesDashboard1.Location = new System.Drawing.Point(324, 12);
-            this.ucEmployeesDashboard1.Name = "ucEmployeesDashboard1";
-            this.ucEmployeesDashboard1.Size = new System.Drawing.Size(306, 65);
-            this.ucEmployeesDashboard1.TabIndex = 1;
+            this.ucReservationsDashboard1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucReservationsDashboard1.BackColor = System.Drawing.Color.White;
+            this.ucReservationsDashboard1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ucReservationsDashboard1.Location = new System.Drawing.Point(12, 149);
+            this.ucReservationsDashboard1.Name = "ucReservationsDashboard1";
+            this.ucReservationsDashboard1.Size = new System.Drawing.Size(880, 471);
+            this.ucReservationsDashboard1.TabIndex = 2;
+            this.ucReservationsDashboard1.TopN = 8;
             // 
-            // ucClientsDashboard1
+            // uc_UsersStatistics1
             // 
-            this.ucClientsDashboard1.BackColor = System.Drawing.SystemColors.Control;
-            this.ucClientsDashboard1.Location = new System.Drawing.Point(12, 12);
-            this.ucClientsDashboard1.Name = "ucClientsDashboard1";
-            this.ucClientsDashboard1.Size = new System.Drawing.Size(306, 65);
-            this.ucClientsDashboard1.TabIndex = 0;
-            // 
-            // ucQueueDashboard1
-            // 
-            this.ucQueueDashboard1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.ucQueueDashboard1.Location = new System.Drawing.Point(12, 83);
-            this.ucQueueDashboard1.Name = "ucQueueDashboard1";
-            this.ucQueueDashboard1.Size = new System.Drawing.Size(616, 576);
-            this.ucQueueDashboard1.TabIndex = 2;
+            this.uc_UsersStatistics1.Location = new System.Drawing.Point(12, 12);
+            this.uc_UsersStatistics1.Name = "uc_UsersStatistics1";
+            this.uc_UsersStatistics1.Size = new System.Drawing.Size(898, 139);
+            this.uc_UsersStatistics1.TabIndex = 1;
             // 
             // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(640, 671);
-            this.Controls.Add(this.ucQueueDashboard1);
-            this.Controls.Add(this.ucEmployeesDashboard1);
-            this.Controls.Add(this.ucClientsDashboard1);
+            this.ClientSize = new System.Drawing.Size(904, 632);
+            this.Controls.Add(this.ucReservationsDashboard1);
+            this.Controls.Add(this.uc_UsersStatistics1);
             this.Name = "frmHome";
             this.Text = "Home";
+            this.Load += new System.EventHandler(this.frmHome_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private ucClientsDashboard ucClientsDashboard1;
-        private ucEmployeesDashboard ucEmployeesDashboard1;
-        private ucQueueDashboard ucQueueDashboard1;
+        private ucUsersStatistics uc_UsersStatistics1;
+        private ucReservationsDashboard ucReservationsDashboard1;
     }
 }

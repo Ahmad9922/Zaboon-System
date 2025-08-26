@@ -81,6 +81,7 @@
             this.btnCancel.Size = new System.Drawing.Size(99, 36);
             this.btnCancel.TabIndex = 23;
             this.btnCancel.Text = "Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // frmFindUser
             // 

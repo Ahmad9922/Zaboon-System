@@ -65,7 +65,7 @@
             this.ucUserCardInfo1.Location = new System.Drawing.Point(3, 60);
             this.ucUserCardInfo1.Name = "ucUserCardInfo1";
             this.ucUserCardInfo1.ShowDeleteButton = false;
-            this.ucUserCardInfo1.Size = new System.Drawing.Size(392, 139);
+            this.ucUserCardInfo1.Size = new System.Drawing.Size(388, 323);
             this.ucUserCardInfo1.TabIndex = 0;
             this.ucUserCardInfo1.User = null;
             // 
@@ -77,7 +77,7 @@
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.ucUserCardInfo1);
             this.Name = "ucFindUser";
-            this.Size = new System.Drawing.Size(397, 202);
+            this.Size = new System.Drawing.Size(601, 386);
             this.ResumeLayout(false);
 
         }

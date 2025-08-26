@@ -34,16 +34,10 @@ namespace Zaboon
 
         private void btnAddReservation_Click(object sender, EventArgs e)
         {
-            frmAddEditReservation AddReservationForm = new frmAddEditReservation();
-            AddReservationForm.OnSaveSuccessfully += AddReservationForm_OnSaveSuccessfully;
-            AddReservationForm.ShowDialog();
+            frmReservationEditor ReservationEditorForm = new frmReservationEditor();
+            ReservationEditorForm.ShowDialog();
 
             LoadReservations();
-        }
-
-        private void AddReservationForm_OnSaveSuccessfully(object sender, clsReservation Reservation)
-        {
-            
         }
 
         private void dgReservationsList_SizeChanged(object sender, EventArgs e)
@@ -54,25 +48,16 @@ namespace Zaboon
         public void frmReservations_Load(object sender, EventArgs e)
         {
             LoadReservations();
-        }
 
-        private void btnForThisDay_CheckedChanged(object sender, EventArgs e)
-        {
-
+            clsReservation.CancelMissedReservations();
         }
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAddEditReservation EditReservationForm = new frmAddEditReservation(clsReservation.Find(SeletedReservationID));
+            frmReservationEditor EditReservationForm = new frmReservationEditor(clsReservation.Find(SeletedReservationID));
             EditReservationForm.ShowDialog();
 
             LoadReservations();
-        }
-
-        private void btnQueueManagement_Click(object sender, EventArgs e)
-        {
-            //frmQueueManagement QueueManagementForm = new frmQueueManagement();
-            //QueueManagementForm.ShowDialog();
         }
     }
 }

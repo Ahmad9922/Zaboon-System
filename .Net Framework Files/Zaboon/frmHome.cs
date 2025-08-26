@@ -16,5 +16,10 @@ namespace Zaboon
         {
             InitializeComponent();
         }
+
+        public void frmHome_Load(object sender, EventArgs e)
+        {
+            uc_UsersStatistics1.FillInfo();
+        }
     }
 }

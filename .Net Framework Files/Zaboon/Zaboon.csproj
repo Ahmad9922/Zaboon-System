@@ -47,6 +47,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
     <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Web" />
@@ -65,11 +66,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmFindUser.cs">
+    <Compile Include="clsGlobal.cs" />
+    <Compile Include="Users\frmFindUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmFindUser.Designer.cs">
+    <Compile Include="Users\frmFindUser.Designer.cs">
       <DependentUpon>frmFindUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Queues\frmQueueManagement.cs">
       <SubType>Form</SubType>
@@ -100,11 +108,11 @@
     <Compile Include="Service Hours\frmServiceHourSetup.Designer.cs">
       <DependentUpon>frmServiceHourSetup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reservations\frmAddEditReservation.cs">
+    <Compile Include="Reservations\frmReservationEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reservations\frmAddEditReservation.Designer.cs">
-      <DependentUpon>frmAddEditReservation.cs</DependentUpon>
+    <Compile Include="Reservations\frmReservationEditor.Designer.cs">
+      <DependentUpon>frmReservationEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="Services\frmAddEditService.cs">
       <SubType>Form</SubType>
@@ -112,35 +120,41 @@
     <Compile Include="Services\frmAddEditService.Designer.cs">
       <DependentUpon>frmAddEditService.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucEmployeesDashboard.cs">
+    <Compile Include="Reservations\ucReservationInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucEmployeesDashboard.Designer.cs">
-      <DependentUpon>ucEmployeesDashboard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ucQueueDashboard.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ucQueueDashboard.Designer.cs">
-      <DependentUpon>ucQueueDashboard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ucReservationInfo.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ucReservationInfo.Designer.cs">
+    <Compile Include="Reservations\ucReservationInfo.Designer.cs">
       <DependentUpon>ucReservationInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ucClientsDashboard.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ucClientsDashboard.Designer.cs">
-      <DependentUpon>ucClientsDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Queues\ucServiceQueuePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Queues\ucServiceQueuePanel.Designer.cs">
       <DependentUpon>ucServiceQueuePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ucServiceReservationCount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Services\ucServiceReservationCount.Designer.cs">
+      <DependentUpon>ucServiceReservationCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reservations\ucReservationsDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reservations\ucReservationsDashboard.Designer.cs">
+      <DependentUpon>ucReservationsDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ucUserInfoPanel3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Users\ucUserInfoPanel3.Designer.cs">
+      <DependentUpon>ucUserInfoPanel3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ucUsersStatistics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Users\ucUsersStatistics.Designer.cs">
+      <DependentUpon>ucUsersStatistics.cs</DependentUpon>
     </Compile>
     <Compile Include="Users\frmUserInfo.cs">
       <SubType>Form</SubType>
@@ -166,11 +180,11 @@
     <Compile Include="Service Hours\ucServiceHourInfoPanel.Designer.cs">
       <DependentUpon>ucServiceHourInfoPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Users\ucFullUserInfoPanel.cs">
+    <Compile Include="Users\ucUserInfoPanel2.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Users\ucFullUserInfoPanel.Designer.cs">
-      <DependentUpon>ucFullUserInfoPanel.cs</DependentUpon>
+    <Compile Include="Users\ucUserInfoPanel2.Designer.cs">
+      <DependentUpon>ucUserInfoPanel2.cs</DependentUpon>
     </Compile>
     <Compile Include="Users\frmAddEditUser.cs">
       <SubType>Form</SubType>
@@ -234,8 +248,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmFindUser.resx">
+    <EmbeddedResource Include="Users\frmFindUser.resx">
       <DependentUpon>frmFindUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Queues\frmQueueManagement.resx">
       <DependentUpon>frmQueueManagement.cs</DependentUpon>
@@ -249,23 +266,26 @@
     <EmbeddedResource Include="Service Hours\frmServiceHourSetup.resx">
       <DependentUpon>frmServiceHourSetup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reservations\frmAddEditReservation.resx">
-      <DependentUpon>frmAddEditReservation.cs</DependentUpon>
+    <EmbeddedResource Include="Reservations\frmReservationEditor.resx">
+      <DependentUpon>frmReservationEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucEmployeesDashboard.resx">
-      <DependentUpon>ucEmployeesDashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ucQueueDashboard.resx">
-      <DependentUpon>ucQueueDashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ucReservationInfo.resx">
+    <EmbeddedResource Include="Reservations\ucReservationInfo.resx">
       <DependentUpon>ucReservationInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ucClientsDashboard.resx">
-      <DependentUpon>ucClientsDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Queues\ucServiceQueuePanel.resx">
       <DependentUpon>ucServiceQueuePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\ucServiceReservationCount.resx">
+      <DependentUpon>ucServiceReservationCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservations\ucReservationsDashboard.resx">
+      <DependentUpon>ucReservationsDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\ucUserInfoPanel3.resx">
+      <DependentUpon>ucUserInfoPanel3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\ucUsersStatistics.resx">
+      <DependentUpon>ucUsersStatistics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\frmUserInfo.resx">
       <DependentUpon>frmUserInfo.cs</DependentUpon>
@@ -282,8 +302,8 @@
     <EmbeddedResource Include="Service Hours\ucServiceHourInfoPanel.resx">
       <DependentUpon>ucServiceHourInfoPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Users\ucFullUserInfoPanel.resx">
-      <DependentUpon>ucFullUserInfoPanel.cs</DependentUpon>
+    <EmbeddedResource Include="Users\ucUserInfoPanel2.resx">
+      <DependentUpon>ucUserInfoPanel2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\frmAddEditUser.resx">
       <DependentUpon>frmAddEditUser.cs</DependentUpon>
@@ -423,6 +443,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\patient_list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login Iamge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login Iamge 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\groups.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

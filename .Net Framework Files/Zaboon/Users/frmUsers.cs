@@ -11,6 +11,11 @@ using ZaboonBL;
 
 namespace Zaboon
 {
+    /// <summary>
+    /// Users management form:
+    /// - Displays user accounts (clients/employees)
+    /// - Supports add, switch type, local search, and removing items from inside the UserControl
+    /// </summary>
     public partial class frmUsers : Form
     {
         private List<clsUser> Users {  get; set; }

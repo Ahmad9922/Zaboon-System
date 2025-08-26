@@ -39,7 +39,6 @@
             this.cToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2ShapesTool1 = new Guna.UI2.WinForms.Guna2ShapesTool(this.components);
-            this.btnQueueManagement = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddReservation = new Guna.UI2.WinForms.Guna2Button();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
@@ -111,7 +110,7 @@
             this.dgReservationsList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dgReservationsList.RowHeadersVisible = false;
             this.dgReservationsList.RowTemplate.Height = 60;
-            this.dgReservationsList.Size = new System.Drawing.Size(908, 549);
+            this.dgReservationsList.Size = new System.Drawing.Size(879, 549);
             this.dgReservationsList.TabIndex = 17;
             this.dgReservationsList.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.LightGrid;
             this.dgReservationsList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -185,25 +184,6 @@
             this.guna2ShapesTool1.Size = new System.Drawing.Size(928, 569);
             this.guna2ShapesTool1.TargetControl = this.dgReservationsList;
             // 
-            // btnQueueManagement
-            // 
-            this.btnQueueManagement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnQueueManagement.BorderRadius = 12;
-            this.btnQueueManagement.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnQueueManagement.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnQueueManagement.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnQueueManagement.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnQueueManagement.FillColor = System.Drawing.Color.LimeGreen;
-            this.btnQueueManagement.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnQueueManagement.ForeColor = System.Drawing.Color.White;
-            this.btnQueueManagement.Image = global::Zaboon.Properties.Resources.event_list;
-            this.btnQueueManagement.Location = new System.Drawing.Point(643, 13);
-            this.btnQueueManagement.Name = "btnQueueManagement";
-            this.btnQueueManagement.Size = new System.Drawing.Size(172, 36);
-            this.btnQueueManagement.TabIndex = 21;
-            this.btnQueueManagement.Text = "Queue Management";
-            this.btnQueueManagement.Click += new System.EventHandler(this.btnQueueManagement_Click);
-            // 
             // btnAddReservation
             // 
             this.btnAddReservation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -216,7 +196,7 @@
             this.btnAddReservation.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAddReservation.ForeColor = System.Drawing.Color.White;
             this.btnAddReservation.Image = global::Zaboon.Properties.Resources.Add;
-            this.btnAddReservation.Location = new System.Drawing.Point(821, 13);
+            this.btnAddReservation.Location = new System.Drawing.Point(792, 13);
             this.btnAddReservation.Name = "btnAddReservation";
             this.btnAddReservation.Size = new System.Drawing.Size(100, 36);
             this.btnAddReservation.TabIndex = 19;
@@ -279,8 +259,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(933, 632);
-            this.Controls.Add(this.btnQueueManagement);
+            this.ClientSize = new System.Drawing.Size(904, 632);
             this.Controls.Add(this.btnAddReservation);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.dgReservationsList);
@@ -308,6 +287,5 @@
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private Guna.UI2.WinForms.Guna2Button btnQueueManagement;
     }
 }

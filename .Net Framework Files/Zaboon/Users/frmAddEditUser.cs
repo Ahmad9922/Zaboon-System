@@ -184,7 +184,7 @@ namespace Zaboon
         {
             if (!string.IsNullOrEmpty(txtUserName.Text))
             {
-                bool IsValidate = !clsUser.IsExist(txtUserName.Text);
+                bool IsValidate = !clsUser.Exists(txtUserName.Text);
 
                 if (IsValidate)
                 {

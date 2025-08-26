@@ -80,8 +80,9 @@
             // btnUpdate
             // 
             this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpdate.AutoRoundedCorners = true;
             this.btnUpdate.BackColor = System.Drawing.Color.Transparent;
-            this.btnUpdate.BorderRadius = 18;
+            this.btnUpdate.BorderRadius = 14;
             this.btnUpdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnUpdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -126,12 +127,12 @@
             this.txtName.TabIndex = 1;
             this.txtName.WordWrap = false;
             // 
-            // ucUserTypeInfo
+            // ucUserTypeInfoPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2ShadowPanel1);
-            this.Name = "ucUserTypeInfo";
+            this.Name = "ucUserTypeInfoPanel";
             this.Size = new System.Drawing.Size(385, 142);
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

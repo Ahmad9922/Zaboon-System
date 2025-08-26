@@ -1,6 +1,6 @@
 ﻿namespace Zaboon
 {
-    partial class frmAddEditReservation
+    partial class frmReservationEditor
     {
         /// <summary>
         /// Required designer variable.
@@ -38,16 +38,18 @@
             this.cbServices = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dtReservationDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.flpServiceHours = new System.Windows.Forms.FlowLayoutPanel();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
-            this.ucUserCardInfo1 = new Zaboon.ucUserInfoPanel();
+            this.lblNoServiceHoursMessage = new System.Windows.Forms.Label();
+            this.ucUserCardInfo1 = new Zaboon.ucUserInfoPanel3();
             ((System.ComponentModel.ISupportInitialize)(this.nudPaidFees)).BeginInit();
             this.SuspendLayout();
             // 
             // txtTitle
             // 
+            this.txtTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTitle.BorderRadius = 12;
             this.txtTitle.BorderThickness = 0;
             this.txtTitle.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -67,7 +69,7 @@
             this.txtTitle.PlaceholderText = "";
             this.txtTitle.ReadOnly = true;
             this.txtTitle.SelectedText = "";
-            this.txtTitle.Size = new System.Drawing.Size(455, 36);
+            this.txtTitle.Size = new System.Drawing.Size(851, 36);
             this.txtTitle.TabIndex = 28;
             this.txtTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -86,7 +88,7 @@
             this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.guna2TextBox2.ForeColor = System.Drawing.Color.Gray;
             this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(14, 264);
+            this.guna2TextBox2.Location = new System.Drawing.Point(441, 77);
             this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2TextBox2.Name = "guna2TextBox2";
             this.guna2TextBox2.PlaceholderText = "";
@@ -135,14 +137,14 @@
             this.txtUserType.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtUserType.ForeColor = System.Drawing.Color.Gray;
             this.txtUserType.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUserType.Location = new System.Drawing.Point(14, 497);
+            this.txtUserType.Location = new System.Drawing.Point(442, 325);
             this.txtUserType.Margin = new System.Windows.Forms.Padding(4);
             this.txtUserType.Multiline = true;
             this.txtUserType.Name = "txtUserType";
             this.txtUserType.PlaceholderText = "";
             this.txtUserType.ReadOnly = true;
             this.txtUserType.SelectedText = "";
-            this.txtUserType.Size = new System.Drawing.Size(92, 51);
+            this.txtUserType.Size = new System.Drawing.Size(92, 59);
             this.txtUserType.TabIndex = 24;
             this.txtUserType.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -158,7 +160,7 @@
             this.btnFindUser.ForeColor = System.Drawing.Color.White;
             this.btnFindUser.Location = new System.Drawing.Point(114, 77);
             this.btnFindUser.Name = "btnFindUser";
-            this.btnFindUser.Size = new System.Drawing.Size(327, 36);
+            this.btnFindUser.Size = new System.Drawing.Size(320, 36);
             this.btnFindUser.TabIndex = 29;
             this.btnFindUser.Text = "Find Client";
             this.btnFindUser.Click += new System.EventHandler(this.btnFindUser_Click);
@@ -171,7 +173,7 @@
             this.nudPaidFees.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nudPaidFees.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.nudPaidFees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.nudPaidFees.Location = new System.Drawing.Point(114, 451);
+            this.nudPaidFees.Location = new System.Drawing.Point(112, 448);
             this.nudPaidFees.Name = "nudPaidFees";
             this.nudPaidFees.Size = new System.Drawing.Size(327, 39);
             this.nudPaidFees.TabIndex = 23;
@@ -193,7 +195,7 @@
             this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.guna2TextBox3.ForeColor = System.Drawing.Color.Gray;
             this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Location = new System.Drawing.Point(14, 454);
+            this.guna2TextBox3.Location = new System.Drawing.Point(12, 451);
             this.guna2TextBox3.Name = "guna2TextBox3";
             this.guna2TextBox3.PlaceholderText = "";
             this.guna2TextBox3.ReadOnly = true;
@@ -214,9 +216,9 @@
             this.cbServices.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbServices.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbServices.ItemHeight = 30;
-            this.cbServices.Location = new System.Drawing.Point(114, 264);
+            this.cbServices.Location = new System.Drawing.Point(541, 77);
             this.cbServices.Name = "cbServices";
-            this.cbServices.Size = new System.Drawing.Size(327, 36);
+            this.cbServices.Size = new System.Drawing.Size(320, 36);
             this.cbServices.TabIndex = 32;
             this.cbServices.SelectedIndexChanged += new System.EventHandler(this.cbServices_SelectedIndexChanged);
             // 
@@ -228,13 +230,14 @@
             this.dtReservationDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtReservationDate.ForeColor = System.Drawing.Color.DimGray;
             this.dtReservationDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtReservationDate.Location = new System.Drawing.Point(113, 497);
+            this.dtReservationDate.Location = new System.Drawing.Point(540, 323);
             this.dtReservationDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtReservationDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtReservationDate.Name = "dtReservationDate";
-            this.dtReservationDate.Size = new System.Drawing.Size(328, 51);
+            this.dtReservationDate.Size = new System.Drawing.Size(321, 61);
             this.dtReservationDate.TabIndex = 33;
             this.dtReservationDate.Value = new System.DateTime(2025, 7, 10, 17, 50, 8, 692);
+            this.dtReservationDate.ValueChanged += new System.EventHandler(this.dtReservationDate_ValueChanged);
             // 
             // guna2TextBox4
             // 
@@ -251,30 +254,23 @@
             this.guna2TextBox4.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.guna2TextBox4.ForeColor = System.Drawing.Color.Gray;
             this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.Location = new System.Drawing.Point(14, 307);
+            this.guna2TextBox4.Location = new System.Drawing.Point(441, 119);
             this.guna2TextBox4.Margin = new System.Windows.Forms.Padding(4);
             this.guna2TextBox4.Multiline = true;
             this.guna2TextBox4.Name = "guna2TextBox4";
             this.guna2TextBox4.PlaceholderText = "";
             this.guna2TextBox4.ReadOnly = true;
             this.guna2TextBox4.SelectedText = "";
-            this.guna2TextBox4.Size = new System.Drawing.Size(93, 138);
+            this.guna2TextBox4.Size = new System.Drawing.Size(93, 198);
             this.guna2TextBox4.TabIndex = 35;
             this.guna2TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // guna2VSeparator1
-            // 
-            this.guna2VSeparator1.Location = new System.Drawing.Point(447, 77);
-            this.guna2VSeparator1.Name = "guna2VSeparator1";
-            this.guna2VSeparator1.Size = new System.Drawing.Size(21, 471);
-            this.guna2VSeparator1.TabIndex = 38;
             // 
             // flpServiceHours
             // 
             this.flpServiceHours.AutoScroll = true;
-            this.flpServiceHours.Location = new System.Drawing.Point(111, 307);
+            this.flpServiceHours.Location = new System.Drawing.Point(541, 121);
             this.flpServiceHours.Name = "flpServiceHours";
-            this.flpServiceHours.Size = new System.Drawing.Size(330, 138);
+            this.flpServiceHours.Size = new System.Drawing.Size(320, 196);
             this.flpServiceHours.TabIndex = 39;
             // 
             // btnSave
@@ -285,11 +281,12 @@
             this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSave.Enabled = false;
             this.btnSave.FillColor = System.Drawing.Color.LimeGreen;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Image = global::Zaboon.Properties.Resources.save;
-            this.btnSave.Location = new System.Drawing.Point(351, 593);
+            this.btnSave.Location = new System.Drawing.Point(748, 538);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(116, 36);
             this.btnSave.TabIndex = 21;
@@ -311,33 +308,43 @@
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.btnCancel.Image = global::Zaboon.Properties.Resources.cancel1;
-            this.btnCancel.Location = new System.Drawing.Point(246, 593);
+            this.btnCancel.Location = new System.Drawing.Point(643, 538);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(99, 36);
             this.btnCancel.TabIndex = 22;
             this.btnCancel.Text = "Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // lblNoServiceHoursMessage
+            // 
+            this.lblNoServiceHoursMessage.ForeColor = System.Drawing.Color.Gray;
+            this.lblNoServiceHoursMessage.Location = new System.Drawing.Point(541, 190);
+            this.lblNoServiceHoursMessage.Name = "lblNoServiceHoursMessage";
+            this.lblNoServiceHoursMessage.Size = new System.Drawing.Size(320, 46);
+            this.lblNoServiceHoursMessage.TabIndex = 41;
+            this.lblNoServiceHoursMessage.Text = "Empty";
+            this.lblNoServiceHoursMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ucUserCardInfo1
             // 
-            this.ucUserCardInfo1.Location = new System.Drawing.Point(14, 119);
+            this.ucUserCardInfo1.BackColor = System.Drawing.Color.White;
+            this.ucUserCardInfo1.Location = new System.Drawing.Point(13, 121);
             this.ucUserCardInfo1.Name = "ucUserCardInfo1";
-            this.ucUserCardInfo1.ShowDeleteButton = false;
-            this.ucUserCardInfo1.Size = new System.Drawing.Size(427, 126);
-            this.ucUserCardInfo1.TabIndex = 40;
+            this.ucUserCardInfo1.Size = new System.Drawing.Size(421, 263);
+            this.ucUserCardInfo1.TabIndex = 42;
             this.ucUserCardInfo1.User = null;
             // 
-            // frmAddEditReservation
+            // frmReservationEditor
             // 
             this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(480, 641);
+            this.ClientSize = new System.Drawing.Size(877, 586);
             this.Controls.Add(this.ucUserCardInfo1);
             this.Controls.Add(this.flpServiceHours);
-            this.Controls.Add(this.guna2VSeparator1);
-            this.Controls.Add(this.guna2TextBox4);
+            this.Controls.Add(this.lblNoServiceHoursMessage);
             this.Controls.Add(this.dtReservationDate);
             this.Controls.Add(this.cbServices);
             this.Controls.Add(this.guna2TextBox3);
@@ -349,9 +356,10 @@
             this.Controls.Add(this.nudPaidFees);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.guna2TextBox4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
-            this.Name = "frmAddEditReservation";
+            this.Name = "frmReservationEditor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmAddEditReservation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudPaidFees)).EndInit();
@@ -373,8 +381,8 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbServices;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtReservationDate;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
-        private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
         private System.Windows.Forms.FlowLayoutPanel flpServiceHours;
-        private ucUserInfoPanel ucUserCardInfo1;
+        private System.Windows.Forms.Label lblNoServiceHoursMessage;
+        private ucUserInfoPanel3 ucUserCardInfo1;
     }
 }

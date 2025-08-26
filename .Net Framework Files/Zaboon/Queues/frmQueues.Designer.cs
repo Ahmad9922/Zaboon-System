@@ -55,7 +55,7 @@
             this.txtUserType.PlaceholderText = "";
             this.txtUserType.ReadOnly = true;
             this.txtUserType.SelectedText = "";
-            this.txtUserType.Size = new System.Drawing.Size(906, 36);
+            this.txtUserType.Size = new System.Drawing.Size(878, 36);
             this.txtUserType.TabIndex = 15;
             this.txtUserType.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -68,7 +68,7 @@
             this.flpQueuesList.BackColor = System.Drawing.Color.White;
             this.flpQueuesList.Location = new System.Drawing.Point(13, 66);
             this.flpQueuesList.Name = "flpQueuesList";
-            this.flpQueuesList.Size = new System.Drawing.Size(907, 557);
+            this.flpQueuesList.Size = new System.Drawing.Size(879, 557);
             this.flpQueuesList.TabIndex = 17;
             // 
             // frmQueues
@@ -76,7 +76,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(932, 635);
+            this.ClientSize = new System.Drawing.Size(904, 635);
             this.Controls.Add(this.flpQueuesList);
             this.Controls.Add(this.txtUserType);
             this.Name = "frmQueues";

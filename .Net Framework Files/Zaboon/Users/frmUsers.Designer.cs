@@ -46,7 +46,7 @@
             this.flpAccountsList.BackColor = System.Drawing.Color.White;
             this.flpAccountsList.Location = new System.Drawing.Point(13, 60);
             this.flpAccountsList.Name = "flpAccountsList";
-            this.flpAccountsList.Size = new System.Drawing.Size(908, 477);
+            this.flpAccountsList.Size = new System.Drawing.Size(879, 477);
             this.flpAccountsList.TabIndex = 1;
             // 
             // txtUserType
@@ -86,7 +86,7 @@
             this.btnAddUser.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAddUser.ForeColor = System.Drawing.Color.White;
             this.btnAddUser.Image = global::Zaboon.Properties.Resources.Add;
-            this.btnAddUser.Location = new System.Drawing.Point(814, 13);
+            this.btnAddUser.Location = new System.Drawing.Point(785, 13);
             this.btnAddUser.Name = "btnAddUser";
             this.btnAddUser.Size = new System.Drawing.Size(107, 36);
             this.btnAddUser.TabIndex = 17;
@@ -161,7 +161,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(933, 666);
+            this.ClientSize = new System.Drawing.Size(904, 666);
             this.Controls.Add(this.btnAddUser);
             this.Controls.Add(this.flpAccountsList);
             this.Controls.Add(this.ucClientUserType);
