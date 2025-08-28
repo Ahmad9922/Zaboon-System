@@ -1,138 +1,62 @@
-# Database Backup Service
+# Zaboon – Client Management System for Institutions
 
-A Windows Service for automating SQL Server database backups.
-The service creates periodic full backups of a specified database, saves them in a configured folder with timestamped filenames, and logs all activities for monitoring and troubleshooting.
+A Windows desktop solution (WinForms) that helps institutions manage Clients, Services, Working Hours, and Reservations. Zaboon streamlines front-desk operations, reduces on‑site congestion with time slots, and provides clear dashboards for workload and performance.
 
----
+## Objectives
+- Centralize client data and service requests.
+- Reduce queues through scheduled reservations and defined working hours.
+- Equip staff with actionable dashboards and quick search.
+- Keep the system extensible for future web/mobile front‑ends.
 
-## Features
+## Key Features
+- Users Management
+  - Two user types: Clients and Employees.
+  - Add/Edit/Delete users, activate/deactivate accounts.
+  - Quick search and card-based user views.
+- Services & Working Hours
+  - Define services (name, description, fees, active status).
+  - Configure service hours per day of week and time range.
+  - Prevent overlapping time slots.
+- Reservations
+  - Book reservations (Client + Service + ServiceHour + Date).
+  - Status tracking: New, Completed, Cancelled.
+  - Summaries and counters (today, month, year).
+- Dashboards
+  - Users KPIs: totals, active/inactive, clients vs employees.
+  - Reservations KPIs: daily/monthly/yearly totals, breakdowns, top services by demand.
 
-* **Automated Backups**: Creates full backups at regular intervals.
-* **Dynamic Configuration**: Fully configurable through `App.config`.
-* **Logging**: Logs service activities, successes, and errors to a file.
-* **Debugging Mode**: Run as a console app for development and testing.
-* **Deployment Ready**: Supports installation/uninstallation using `InstallUtil`.
+## Main Modules
+- Users: list, search, add/edit, quick delete.
+- Services: list, add/edit, activate/deactivate.
+- Service Hours: per‑service schedules and slot management.
+- Reservations: list, add/edit, status management.
+- Dashboards: users and reservations KPIs (including top services).
 
----
+## Benefits
+- Faster service delivery and less crowding at counters.
+- Clear visibility for managers via KPIs and trends.
+- Consistent data model ready for future integrations (web/mobile/API).
+- Modern, clean WinForms UI with reusable controls.
 
-## Core Functionalities
+## Technology
+- UI: WinForms with Guna.UI2 controls.
+- Data: SQL Server.
+- Layers: UI + Business Layer (BL) + Data Access Layer (DAL).
+- Safe, parameterized database access.
 
-   * Perform full backup of SQL Server databases.
-   * Save backups with timestamped names.
-   * Configurable via `App.config`:
+## Getting Started
+1. Import the bundled database
+   - A ready database copy is included in the project.
+   - Restore via SQL Server Management Studio (Databases > Restore Database…).
+2. Update the connection string
+   - In App.config of the WinForms project, point to your SQL Server instance and the restored database.
+3. Packages
+   - Ensure NuGet packages are restored (including Guna.UI2.WinForms).
+4. Build and Run
+   - Build the solution and run the WinForms app.
 
-     * Database connection string.
-     * Backup folder path.
-     * Log folder path.
-     * Backup interval (minutes).
-   * Graceful error handling with detailed logging.
+Note: If UsersTypes are not already seeded, add Client and Employee types (IDs commonly 1 and 2).
 
-## Logging and Monitoring
-
-   * Logs:
-
-     * Service start and stop events.
-     * Successful backups with file paths.
-     * Errors during backup or connection.
-
-   **Sample Log Output**:
-
-   ```
-   [2024-12-16 14:00:00] Service Started.
-   [2024-12-16 14:10:00] Database backup successful: C:\DatabaseBackups\Backup_20241216_141000.bak
-   [2024-12-16 15:10:00] Error during backup: Network-related or instance-specific error occurred while establishing a connection to SQL Server.
-   [2024-12-16 16:00:00] Service Stopped.
-   ```
-
-## Debugging in Console Mode
-
-   * Run interactively to view logs in the console.
-   * Stop service manually in debug mode.
-   * Uses `Environment.UserInteractive`.
-
-## Deployment Requirements
-
-   * Includes `ProjectInstaller.cs`.
-   * Service name: `DatabaseBackupService`.
-   * Startup type: **Automatic**.
-   * Service dependencies:
-
-     * `MSSQLSERVER` (or named instance).
-     * `RpcSs` (Remote Procedure Call).
-     * `EventLog`.
-
-## Testing Scenarios
-
-   * Backup success, connection failure, service recovery, console debugging.
-
----
-
-## App.config
-
-Configuration is stored in `App.config` under `<appSettings>`.
-
-**Example**:
-
-```xml
-<configuration>
-  <appSettings>
-    <add key="ConnectionString" value="Server=YOUR_SERVER;Database=YOUR_DATABASE;Integrated Security=True;" />
-    <add key="BackupFolder" value="C:\DatabaseBackups" />
-    <add key="LogFolder" value="C:\DatabaseBackups\Logs" />
-    <add key="BackupIntervalMinutes" value="60" />
-  </appSettings>
-</configuration>
-```
-
----
-
-## Build Instructions
-
-1. Open the project in **Visual Studio**.
-2. Select **Release** mode from the toolbar.
-3. Build the project (`Ctrl + Shift + B`).
-4. The compiled files will be available in:
-
-   ```
-   /bin/Release
-   ```
-
----
-
-## Deployment Instructions
-
-### Install the Service
-
-```bash
-InstallUtil.exe DatabaseBackupService.exe
-```
-
-### Start the Service
-
-```bash
-net start DatabaseBackupService
-```
-
-### Stop the Service
-
-```bash
-net stop DatabaseBackupService
-```
-
-### Uninstall the Service
-
-```bash
-InstallUtil.exe /u DatabaseBackupService.exe
-```
-
----
-
-## Additional Notes
-
-* The service will automatically create backup and log directories if they don’t exist.
-* Exception handling ensures detailed error messages are logged.
-* Scalable to handle large databases with configurable intervals.
-
----
-
-This project provides practical experience in building, deploying, and managing **Windows Services** with real-world database backup operations. 
+## License & Contact
+- License: add your preferred license (e.g., MIT/Apache/Proprietary).
+- For questions or feature requests, contact the maintainer or open an issue.
