@@ -56,7 +56,3 @@ A Windows desktop solution (WinForms) that helps institutions manage Clients, Se
    - Build the solution and run the WinForms app.
 
 Note: If UsersTypes are not already seeded, add Client and Employee types (IDs commonly 1 and 2).
-
-## License & Contact
-- License: add your preferred license (e.g., MIT/Apache/Proprietary).
-- For questions or feature requests, contact the maintainer or open an issue.
